@@ -5,16 +5,16 @@ from typing import Tuple
 
 class Box:
     
-    def __init__(self,x : float,y : float,z : float, w: float, h : float, l : float):
+    def __init__(self,x : int,y : int,z : int, w: int, h : int, l : int):
         """Create hit boxes of the package
 
         Args:
-            x (float): x coordinate of the lower point
-            y (float): y coordinate of the lower point
-            z (float): z coordinate of the lower point
-            w (float): width of the box
-            h (float): hight of the box
-            l (float): length of the box
+            x (int): x coordinate of the lower point
+            y (int): y coordinate of the lower point
+            z (int): z coordinate of the lower point
+            w (int): width of the box
+            h (int): hight of the box
+            l (int): length of the box
         """
         # titik minimum
         self.min_x = x
@@ -37,13 +37,13 @@ class Box:
         self.max_y = self.min_y + self.dy
         self.max_z = self.min_z + self.dz
     
-    def setPosition(self, x : float, y : float, z : float ):
+    def setPosition(self, x : int, y : int, z : int ):
         """set new position
 
         Args:
-            x (float): new x coordinate
-            y (float): new y coordinate
-            z (float): new z coordinate
+            x (int): new x coordinate
+            y (int): new y coordinate
+            z (int): new z coordinate
         """
         self.min_x = x
         self.min_y = y
@@ -88,7 +88,7 @@ class Box:
         )
 
     @property
-    def render_dimensions(self) -> Tuple[float, float, float]:
+    def render_dimensions(self) -> Tuple[int, int, int]:
         """Dimensi siap pakai untuk visualizer Viser."""
         return (self.dx, self.dy, self.dz)
         
@@ -179,6 +179,7 @@ class Truck:
         if not self.is_supported(new_package):
             return False
         
+
         self.packages.append(new_package)
         self.current_weight += new_package.weight
         self.current_value += new_package.value
@@ -236,9 +237,10 @@ class Truck:
                 overlap_x = (box.min_x < other.box.max_x) and (box.max_x > other.box.min_x)
                 overlap_y = (box.min_y < other.box.max_y) and (box.max_y > other.box.min_y)
                 if overlap_x and overlap_y :
+                    if other.isFragile:
+                        return False
                     return True
         return False
-    
     
     
         

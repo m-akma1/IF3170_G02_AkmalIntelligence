@@ -6,11 +6,11 @@ import random
 
 
 
-def renderBox(server : viser.ViserServer, box : uma.Box, id:str, wireframe = False):
+def renderBox(server : viser.ViserServer, box : uma.Box, id:str, wireframe = False, fragile = False):
     server.scene.add_box(
         name= id,
         dimensions=box.render_dimensions,
-        color=(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
+        color= (255,0,0) if fragile else (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
         wireframe=wireframe,
         position=(box.getCenter) 
     )
@@ -19,12 +19,12 @@ def renderBox(server : viser.ViserServer, box : uma.Box, id:str, wireframe = Fal
 def main():
     server = viser.ViserServer()
     # note z itu tinggi
-    TrukBox = uma.Box(0,0,0, 5,5,8)
+    TrukBox = uma.Box(0,0,0, 5,8,8)
     Truk  = uma.Truck(TrukBox,500)
 
     
     pack1_box = uma.Box(0,0,0, 1,1,1)
-    paket1 = uma.Package("pack1",pack1_box,('x','y','z') ,10, 10, False, 0)
+    paket1 = uma.Package("pack1",pack1_box,('x','y','z') ,10, 10, True, 0)
     
     pack2_box = uma.Box(0,0,0, 1,2,1)
     paket2 = uma.Package("pack2", pack2_box,('x','y','z'),20, 20, False, 0)
@@ -33,7 +33,7 @@ def main():
     paket3 = uma.Package("pack3", pack3_box,('x','y','z') ,50, 10, False, 0)
     
     pack4_box = uma.Box(0,0,0, 3,3,3)
-    paket4 = uma.Package("pack4", pack4_box,('x','y','z') ,20, 10, False, 0)
+    paket4 = uma.Package("pack4", pack4_box,('x','y','z') ,20, 10, True, 0)
     
     pack5_box = uma.Box(0,0,0, 4,4,4)
     paket5 = uma.Package("pack5", pack5_box,('x','y','z') ,50, 10, False, 0)
@@ -43,6 +43,8 @@ def main():
 
     paketDatang : list[uma.Package] = [paket1, paket2, paket3, paket4, paket5, paket6]
     
+    renderBox(server, TrukBox,"Truk Uma", True)
+    
     iterasi = 0
     while (True):
         paket = paketDatang.pop()
@@ -51,15 +53,18 @@ def main():
             paket.rotateRandom()
             paket.box.setRandomPosition(TrukBox)
             paketDatang.append(paket)
+            for package in Truk.packages:
+                renderBox(server, package.box, package.id,fragile=package.isFragile)
+            
+            time.sleep(1)
             iterasi += 1
         
         if (len(paketDatang) <= 0) :
             break
         
-    renderBox(server, TrukBox,"Truk Uma", True)
     
     for package in Truk.packages:
-        renderBox(server, package.box, package.id)
+        renderBox(server, package.box, package.id, fragile=package.isFragile)
         
        
     print("Open your browser to http://localhost:8080")
