@@ -1,5 +1,5 @@
 
-import interface as uma
+from . import interface as uma
 import viser 
 import time
 import random

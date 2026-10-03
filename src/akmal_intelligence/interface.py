@@ -1,6 +1,7 @@
-import random
-from typing import Tuple
+from __future__ import annotations
 
+import random
+from typing import Sequence, Tuple
 
 
 class Box:
@@ -63,7 +64,7 @@ class Box:
         new_z = random.randint(container.min_z, max(container.min_z,valid_z))
         self.setPosition(new_x,new_y,new_z)
     
-    def setOrientation(self, orientation:list):
+    def setOrientation(self, orientation: Sequence[str]):
         """Apply orientation into the package
 
         Args:
@@ -137,7 +138,7 @@ class Package:
     def rotateRandom(self):
         """random rotate of the package orientation
         """
-        self.orientation = random.choice(self.ALL_ORIENTATIONS)
+        self.orientation = tuple(random.choice(self.ALL_ORIENTATIONS))
     
     
 class Truck:
