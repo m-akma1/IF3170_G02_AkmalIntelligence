@@ -1,0 +1,63 @@
+{
+    "uma_truck" : {
+        "Dimensions" : [5,8,8],
+        "MaxCapacity" : 500
+    },
+    
+    "uma_packages" : [
+        {
+            "id"         : "pack_1",
+            "Dimensions" : [1,1,1],
+            "Orientation": ["x","y","z"],
+            "Value"      : 10,
+            "Weight"     : 10,
+            "IsFragile"  : true,
+            "ETA"        : 0
+        },
+        {
+            "id"         : "pack_2",
+            "Dimensions" : [1,2,1],
+            "Orientation": ["x","y","z"],
+            "Value"      : 20,
+            "Weight"     : 20,
+            "IsFragile"  : false,
+            "ETA"        : 0
+        },
+        {
+            "id"         : "pack_3",
+            "Dimensions" : [1,2,3],
+            "Orientation": ["x","y","z"],
+            "Value"      : 50,
+            "Weight"     : 10,
+            "IsFragile"  : false,
+            "ETA"        : 0
+        },
+        {
+            "id"         : "pack_4",
+            "Dimensions" : [3,3,3],
+            "Orientation": ["x","y","z"],
+            "Value"      : 20,
+            "Weight"     : 10,
+            "IsFragile"  : true,
+            "ETA"        : 0
+        },
+        {
+            "id"         : "pack_5",
+            "Dimensions" : [4,4,4],
+            "Orientation": ["x","y","z"],
+            "Value"      : 50,
+            "Weight"     : 10,
+            "IsFragile"  : false,
+            "ETA"        : 0
+        },
+        {
+            "id"         : "pack_6",
+            "Dimensions" : [5,2,1],
+            "Orientation": ["x","y","z"],
+            "Value"      : 50,
+            "Weight"     : 10,
+            "IsFragile"  : true,
+            "ETA"        : 0
+        }
+    ]
+}

@@ -1,12 +1,9 @@
-from __future__ import annotations
-
 import random
-from typing import Sequence, Tuple
-
+from typing import Tuple
 
 class Box:
     
-    def __init__(self,x : int,y : int,z : int, w: int, h : int, l : int):
+    def __init__(self,w: int, h : int, l : int, x : int = 0,y : int = 0, z : int = 0):
         """Create hit boxes of the package
 
         Args:
@@ -24,8 +21,8 @@ class Box:
         
         # Dimensi
         self.w = w
-        self.h = h
         self.l = l
+        self.h = h
         
         # Dimensi efektif
         self.dx = self.w
@@ -64,7 +61,7 @@ class Box:
         new_z = random.randint(container.min_z, max(container.min_z,valid_z))
         self.setPosition(new_x,new_y,new_z)
     
-    def setOrientation(self, orientation: Sequence[str]):
+    def setOrientation(self, orientation):
         """Apply orientation into the package
 
         Args:
@@ -105,7 +102,7 @@ class Package:
             ['z', 'x', 'y'],
             ['z', 'y', 'x']
         ]
-    def __init__(self, id : str, box : Box, orientation:tuple = ('x', 'y', 'z'), value: int = 0, weight:int = 0, fragile:bool = False, eta : int = 1):
+    def __init__(self, id : str, box : Box, orientation:tuple = ('x', 'y', 'z'), value: int = 0, weight:int = 0, fragile:bool = False, eta : int = 1, color : tuple = (255,255,255)):
         """_summary_
 
         Args:
@@ -115,7 +112,8 @@ class Package:
             value (int, optional)           : the value of the package. Defaults to 0.
             weight (int, optional)          : the weight of the package. Defaults to 0.
             fragile (bool, optional)        : is the package can be divided. Defaults to False.
-            eta (int, optional)             : when the package will arrived. Defaults to 1.
+            eta (int, optional)             : when the package will arrived. Defaults to 0.
+            color (tuple, optional)         : for UI propose
         """
         self.id = id
         self.box = box
@@ -124,6 +122,7 @@ class Package:
         self.weight = weight
         self.isFragile = fragile
         self.eta = eta
+        self.color = color
         
     @property
     def orientation(self) -> tuple:
@@ -149,11 +148,16 @@ class Truck:
             maxSize (Box): packages container maximum size hitboxes
             maxWeight (int): maximum wight that the truck can carries
         """
-        self.maxSizeTruck = maxSize
+        self.maxSizeTruck= maxSize
         self.maxWeight = maxWeight
         self.current_weight = 0
         self.current_value = 0
         self.packages : list[Package]= []
+    
+    def clear(self) :
+        self.packages.clear()
+        self.current_weight = 0
+        self.current_value = 0
     
     def putPackage(self, new_package : Package) -> bool:
         """Checks is packages can be put in the truck
@@ -243,5 +247,22 @@ class Truck:
                     return True
         return False
     
+    def is_fragile_valid(self) -> bool:
+        EPSILON = 1e-5
+        fragile_boxes = [boxes.box for boxes in self.packages if boxes.isFragile]
+
+        if not fragile_boxes :
+            return True
+        for fragile_box in fragile_boxes:
+            for other_box in self.packages:
+                if other_box in fragile_boxes:
+                    continue
+                
+                if abs(other_box.min_z - fragile_box.max_z) <= EPSILON:
+                    overlap_x = (fragile_box.min_x < other_box.max_x) and (fragile_box.max_x > other_box.min_x)
+                    overlap_y = (fragile_box.min_y < other_box.max_y) and (fragile_box.max_y > other_box.min_y)
+                    if overlap_x and overlap_y:
+                        return True
+        return False
     
         
