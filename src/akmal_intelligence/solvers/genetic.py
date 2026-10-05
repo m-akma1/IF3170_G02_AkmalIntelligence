@@ -1,7 +1,7 @@
 import random
-import interface as uma
-from state import State
-from decoder import PlacementDecoder
+import akmal_intelligence.interface as uma
+from akmal_intelligence.state import State
+from akmal_intelligence.decoder import PlacementDecoder
 
 class GeneticSolver:
     def __init__(self, truck : uma.Truck, packages : list[uma.Package], pop_size :int = 30 , generations: int = 30, mutation_rate: float = 0.5):

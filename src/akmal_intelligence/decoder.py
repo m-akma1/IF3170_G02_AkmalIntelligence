@@ -1,6 +1,6 @@
 import copy
-import interface as uma
-from state import State
+import akmal_intelligence.interface as uma
+from akmal_intelligence.state import State
 
 class PlacementDecoder:
     """Menerjemahkan State menjadi koordinat fisik di dalam truck

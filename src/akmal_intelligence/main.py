@@ -1,11 +1,11 @@
 
-import interface as uma
-import umaIO as uma_reader
+import akmal_intelligence.interface as uma
+import akmal_intelligence.umaIO as uma_reader
 import viser 
 import time
 import copy
-from decoder import PlacementDecoder
-from solvers.genetic import GeneticSolver
+from akmal_intelligence.decoder import PlacementDecoder
+from akmal_intelligence.solvers.genetic import GeneticSolver
 
 
 
