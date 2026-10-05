@@ -1,4 +1,4 @@
-import akmal_intelligence.interface as uma
+import uma_ai.interface as uma
 import json
 import random
 

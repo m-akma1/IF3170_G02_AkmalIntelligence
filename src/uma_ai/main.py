@@ -1,15 +1,14 @@
 
-import akmal_intelligence.interface as uma
-import akmal_intelligence.umaIO as uma_reader
+import uma_ai.interface as interface
+import uma_ai.reader as reader
 import viser 
 import time
 import copy
-from akmal_intelligence.decoder import PlacementDecoder
-from akmal_intelligence.solvers.genetic import GeneticSolver
+from uma_ai.solvers.genetic import GeneticSolver
 
 
 
-def renderBox(server : viser.ViserServer, box : uma.Box, id:str, wireframe = False, fragile = False, color = (255,255,255)):
+def renderBox(server : viser.ViserServer, box : interface.Box, id:str, wireframe = False, fragile = False, color = (255,255,255)):
     server.scene.add_box(
         name= id,
         dimensions= box.render_dimensions,
@@ -21,7 +20,7 @@ def renderBox(server : viser.ViserServer, box : uma.Box, id:str, wireframe = Fal
 
 def main():
     server = viser.ViserServer()
-    Truk, paketDatang = uma_reader.readJsonUmaIncomingPackets("data/uma.json")
+    Truk, paketDatang = reader.readJsonUmaIncomingPackets("data/interface.json")
     print(Truk.maxSizeTruck)
     print(f"Jumlah paket : {len(paketDatang)}")
     renderBox(server, Truk.maxSizeTruck,"Truk Uma", True)
@@ -36,7 +35,7 @@ def main():
     candidate_points = [(0, 0, 0)]
     for idx in best_solution.sequences:
         pkg = candidate_packages[idx]
-        pkg.orientation = uma.Package.ALL_ORIENTATIONS[best_solution.orientation[idx]]
+        pkg.orientation = tuple(interface.Package.ALL_ORIENTATIONS[best_solution.orientation[idx]])
         candidate_points.sort(key=lambda pt: (pt[2], pt[1], pt[0]))
         
         placed = False
@@ -50,7 +49,7 @@ def main():
                 best_pt = pt
                 placed = True
                 break
-        if placed and best_pt:
+        if placed and best_pt is not None:
             final_truck.putPackage(pkg)
             candidate_points.remove(best_pt)
             bx = pkg.box
@@ -75,6 +74,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
 

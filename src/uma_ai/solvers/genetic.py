@@ -1,10 +1,10 @@
 import random
-import akmal_intelligence.interface as uma
-from akmal_intelligence.state import State
-from akmal_intelligence.decoder import PlacementDecoder
+import uma_ai.interface as interface
+from uma_ai.state import State
+from uma_ai.decoder import PlacementDecoder
 
 class GeneticSolver:
-    def __init__(self, truck : uma.Truck, packages : list[uma.Package], pop_size :int = 30 , generations: int = 30, mutation_rate: float = 0.5):
+    def __init__(self, truck : interface.Truck, packages : list[interface.Package], pop_size :int = 30 , generations: int = 30, mutation_rate: float = 0.5):
         self.truck = truck
         self.packages = packages
         self.pop_size = pop_size
@@ -15,6 +15,8 @@ class GeneticSolver:
     def crossover_ox(self, parent1: list[int], parent2:list[int]) -> list[int]:
         
         size = len(parent1)
+        if size < 2:
+            return parent1.copy()
         a,b = sorted(random.sample(range(size), 2))
         child = [-1] * size
         child[a:b+1] = parent1[a:b+1]
@@ -27,6 +29,9 @@ class GeneticSolver:
         return child
     
     def mutate(self, ind : State):
+        if ind.num_packing < 2:
+            return
+
         if random.random() < self.mutation_rate:
             i, j = random.sample(range(ind.num_packing) , 2)
             ind.sequences[i], ind.sequences[j] = ind.sequences[j], ind.sequences[i]
@@ -41,7 +46,7 @@ class GeneticSolver:
         
         best_ind = max(self.population, key=lambda x:x.fitness)
         
-        for gen in range(self.generation):
+        for _gen in range(self.generation):
             self.population.sort(key=lambda x:x.fitness, reverse=True)
             new_pop = self.population[:2] # elitisme ambil 2 yang terbaik
             
@@ -52,7 +57,8 @@ class GeneticSolver:
                 # crossover
                 child_seq = self.crossover_ox(p1.sequences, p2.sequences)
                 child_ori = [
-                    p1.orientation[i] if random.random() < 0.5 else p2.orientation[i] for i in range(ind.num_packing)
+                    p1.orientation[i] if random.random() < 0.5 else p2.orientation[i]
+                    for i in range(len(self.packages))
                 ]
                 
                 child = State(len(self.packages), child_seq, child_ori)
@@ -65,7 +71,7 @@ class GeneticSolver:
             if current_best.fitness > best_ind.fitness:
                 best_ind = current_best.clone()
             
-            print(f"Gen {gen + 1}/{self.generation} - Best Fitness: {best_ind.fitness}")
+            print(f"Gen {_gen + 1}/{self.generation} - Best Fitness: {best_ind.fitness}")
             
         return best_ind
 
@@ -80,7 +86,7 @@ class GeneticSolver:
         history = []
         best_ind = max(self.population, key=lambda x: x.fitness).clone()
 
-        for gen in range(self.generation):
+        for _ in range(self.generation):
             self.population.sort(key=lambda x: x.fitness, reverse=True)
             new_pop = [self.population[0].clone(), self.population[1].clone()]  # Elitisme
 

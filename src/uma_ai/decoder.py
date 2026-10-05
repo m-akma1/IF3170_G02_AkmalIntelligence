@@ -1,27 +1,26 @@
 import copy
-import akmal_intelligence.interface as uma
-from akmal_intelligence.state import State
+import uma_ai.interface as interface
+from uma_ai.state import State
 
 class PlacementDecoder:
     """Menerjemahkan State menjadi koordinat fisik di dalam truck
     """
     
     @staticmethod
-    def decode_and_evaluate(state:State, truck_temp: uma.Truck, packages_temp: list[uma.Package]) -> float:
+    def decode_and_evaluate(state:State, truck_temp: interface.Truck, packages_temp: list[interface.Package]) -> float:
         
         truck = copy.deepcopy(truck_temp)
         coming_packages = [copy.deepcopy(p) for p in packages_temp]
         
         candidate_points = [(0,0,0)]
         
-        placed = False
-        best_point = None
-        
         for idx in state.sequences:
+            placed = False
+            best_point = None
             package = coming_packages[idx]
             orien_idx = state.orientation[idx]
             
-            package.orientation = uma.Package.ALL_ORIENTATIONS[orien_idx]
+            package.orientation = tuple(interface.Package.ALL_ORIENTATIONS[orien_idx])
             
             # mengutamakan Z terendah, Y kemudian X
             candidate_points.sort(key=lambda pt: (pt[2], pt[1], pt[0]))
@@ -61,7 +60,7 @@ class PlacementDecoder:
                 if (p_under == p_above):
                     continue
                 
-                if (p_above.box.min_z >= p_under.box.max_z and truck.check_collision(uma.Box(p_under.box.w, 1,p_under.box.l, p_under.box.min_x, p_under.box.min_y, p_under.box.min_z), p_above.box)):
+                if (p_above.box.min_z >= p_under.box.max_z and truck.check_collision(interface.Box(p_under.box.w, 1,p_under.box.l, p_under.box.min_x, p_under.box.min_y, p_under.box.min_z), p_above.box)):
                     if p_under.eta < p_above.eta:
                         penalty_eta += 50 * (p_above.eta - p_under.eta)
         state.fitness = fitness - penalty_eta

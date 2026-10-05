@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "akmal-intelligence"
+name = "uma-ai"
 version = "0.0.1"
 description = "IF3170 Project I: Local search to determine the most optimal package loading configuration for a container truck."
 readme = "README.md"
@@ -27,4 +27,4 @@ dev = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/akmal_intelligence"]
+packages = ["src/uma_ai"]

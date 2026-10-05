@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 import random
-from typing import Tuple
+from typing import Sequence, Tuple
 
 class Box:
     
@@ -61,7 +63,7 @@ class Box:
         new_z = random.randint(container.min_z, max(container.min_z,valid_z))
         self.setPosition(new_x,new_y,new_z)
     
-    def setOrientation(self, orientation):
+    def setOrientation(self, orientation: Sequence[str]) -> None:
         """Apply orientation into the package
 
         Args:
@@ -102,7 +104,7 @@ class Package:
             ['z', 'x', 'y'],
             ['z', 'y', 'x']
         ]
-    def __init__(self, id : str, box : Box, orientation:tuple = ('x', 'y', 'z'), value: int = 0, weight:int = 0, fragile:bool = False, eta : int = 1, color : tuple = (255,255,255)):
+    def __init__(self, id: str, box: Box, orientation: Sequence[str] = ('x', 'y', 'z'), value: int = 0, weight: int = 0, fragile: bool = False, eta: int = 1, color: tuple[int, int, int] = (255, 255, 255)):
         """_summary_
 
         Args:
@@ -125,11 +127,11 @@ class Package:
         self.color = color
         
     @property
-    def orientation(self) -> tuple:
+    def orientation(self) -> tuple[str, ...]:
         return self._orientation
 
     @orientation.setter
-    def orientation(self, new_ori: tuple):
+    def orientation(self, new_ori: Sequence[str]) -> None:
         """set the package orientation"""
         self._orientation = tuple(new_ori)
         self.box.setOrientation(self.orientation)
@@ -249,14 +251,16 @@ class Truck:
     
     def is_fragile_valid(self) -> bool:
         EPSILON = 1e-5
-        fragile_boxes = [boxes.box for boxes in self.packages if boxes.isFragile]
+        fragile_packages = [package for package in self.packages if package.isFragile]
 
-        if not fragile_boxes :
+        if not fragile_packages:
             return True
-        for fragile_box in fragile_boxes:
-            for other_box in self.packages:
-                if other_box in fragile_boxes:
+        for fragile_package in fragile_packages:
+            fragile_box = fragile_package.box
+            for other_package in self.packages:
+                if other_package is fragile_package:
                     continue
+                other_box = other_package.box
                 
                 if abs(other_box.min_z - fragile_box.max_z) <= EPSILON:
                     overlap_x = (fragile_box.min_x < other_box.max_x) and (fragile_box.max_x > other_box.min_x)
