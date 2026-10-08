@@ -1,8 +1,5 @@
 from itertools import combinations
-
-import uma_ai.core.model as model
-import uma_ai.core.geometry as geometry
-
+from . import model, geometry
 
 def is_inside_bound(package: model.PackageState, truck: model.TruckState) -> bool:
     """True jika paket di dalam bounding dimensi truk"""

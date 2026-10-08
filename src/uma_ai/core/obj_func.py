@@ -1,9 +1,8 @@
-import uma_ai.core.model as model
-import uma_ai.core.constraints as constraint
+from . import model, constraints
 
 def variant_1_hard(_state: model.TruckState) -> float:
     """Hardest constraint: if any constraint is violated, return 0.0"""
-    if not constraint.is_valid(_state):
+    if not constraints.is_valid(_state):
         return 0.0
 
     total_values = sum(p.value for p in _state.packages_inside.values())
@@ -15,7 +14,7 @@ def variant_1_hard(_state: model.TruckState) -> float:
     return total_values
 
 def variant_2(_state: model.TruckState) -> float:
-    if not constraint.is_valid(_state):
+    if not constraints.is_valid(_state):
         return 0.0
 
     total_values = sum(p.value for p in _state.packages_inside.values())

@@ -1,6 +1,4 @@
-import uma_ai.core.model as model
-from uma_ai.core import constraints
-from uma_ai.core.geometry import is_on_top_of
+from . import model, geometry, constraints
 
 OUTSIDE = (-1, -1, -1)
 
@@ -21,7 +19,7 @@ def _dependants(truck: model.TruckState, package: model.PackageState) -> list[mo
     """Paket di dalam truk yang bertumpu langsung di atas `package`."""
     return [
         p for p in truck.packages_inside.values()
-        if p is not package and is_on_top_of(p, package)
+        if p is not package and geometry.is_on_top_of(p, package)
     ]
 
 

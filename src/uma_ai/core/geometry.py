@@ -1,4 +1,4 @@
-import uma_ai.core.model as model
+from . import model
 
 def extents(package: model.PackageState) -> tuple[int, int, int]:
     """
