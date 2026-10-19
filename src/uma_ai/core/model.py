@@ -1,20 +1,22 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from itertools import chain
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 from typing import Optional
 import json
 
 class Dimension(BaseModel):
-    width: int
-    length: int
-    height: int
+    model_config = ConfigDict(populate_by_name=True)
+    width: int = Field(...,alias="w")
+    length: int = Field(...,alias="l")
+    height: int = Field(...,alias="h")
 
 
 class Orientation(BaseModel):
     """
     Valid value only permutation of (x, y, z).
     """
+    model_config = ConfigDict(populate_by_name=True)
     width: str = Field(..., alias="w")
     length: str = Field(..., alias="l")
     height: str = Field(..., alias="h")
@@ -50,9 +52,11 @@ class Position(BaseModel):
 
 
 class Package(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    
     id: str
-    dim: Dimension
-    orient: Orientation
+    dim: Dimension = Field(...,alias="dimension")
+    orient: Orientation = Field(...,alias="orientation")
     value: int
     weight: int
     is_fragile: bool
@@ -64,7 +68,7 @@ class Package(BaseModel):
 
 
 class Truck(BaseModel):
-    dim: Dimension
+    dim: Dimension = Field(...,alias="dimension")
     max_capacity: int
 
     # For fimal state representation
