@@ -7,7 +7,7 @@ name = "uma-ai"
 version = "0.0.1"
 description = "IF3170 Project I: Local search to determine the most optimal package loading configuration for a container truck."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [
     { name = "Muhammad Akmal", email = "13524099@std.stei.itb.ac.id" },
     { name = "Dzaki Ahmad Al Hussainy", email = "13524084@std.stei.itb.ac.id" },
