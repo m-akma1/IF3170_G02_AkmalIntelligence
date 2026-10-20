@@ -12,7 +12,7 @@ class _Params(BaseModel):
 
 class ObjectiveParams(_Params):
     """
-    Bobot penalti dinormalisasi: c_* x v_max (nilai paket terbesar) per pelanggaran,
+    Bobot penalti dinormalisasi: c_* x v_max (nilai paket terbesar yang muat di truk) per pelanggaran,
     kecuali berat: c_weight x vw_max (rasio nilai/berat terbesar) per unit kelebihan berat.
     Dengan c = 1, satu pelanggaran selalu lebih mahal dari paket mana pun.
     """
@@ -20,7 +20,7 @@ class ObjectiveParams(_Params):
     c_floating: float = 1.0
     c_fragile: float = 1.0
     c_weight: float = 1.0
-    c_eta: float = 1.0
+    c_eta: float = 0.01         # per pasangan LIFO (urutan bongkar) yang dilanggar
     c_support: float = 1.0      # variant_4: per paket yang alasnya tidak tertumpu sama sekali
     min_support: float = 0.5    # variant_4: rasio alas minimal yang harus tertumpu
     c_compact: float = 1.0      # variant_5: tie-breaker kerapatan (lantai dan dinding belakang)

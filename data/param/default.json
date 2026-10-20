@@ -5,7 +5,7 @@
     "c_floating": 1.0,
     "c_fragile": 1.0,
     "c_weight": 1.0,
-    "c_eta": 1.0,
+    "c_eta": 0.01,
     "c_support": 1.0,
     "min_support": 0.5,
     "c_compact": 1.0,

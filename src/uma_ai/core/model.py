@@ -192,13 +192,23 @@ class TruckState:
     min_support: float = 0.5 # Batas minimum persentase alas paket (variant)
     track_eta: bool = True
 
-    # Skala untuk normalisasi penalti objective function
+    # Skala untuk normalisasi penalti objective function, hanya dari paket yang muat di salah satu truk
     v_max: int = 1
     vw_max: float = 1.0
 
     def find(self, package_id: str) -> PackageState | None:
         package = self.packages_inside.get(package_id)
         return package if package is not None else self.packages_outside.get(package_id)
+
+
+def _placeable(package: PackageState, trucks: list[Truck]) -> bool:
+    """True jika paket muat (ukuran pada salah satu orientasi dan berat) di salah satu truk."""
+    return any(
+        package.weight <= t.max_capacity
+        and any(dx <= t.dim.width and dy <= t.dim.length and dz <= t.dim.height
+                for dx, dy, dz in package.extents)
+        for t in trucks
+    )
 
 
 def variable_to_state(var: Variable, min_support: float = 0.5) -> TruckState:
@@ -247,6 +257,7 @@ def variable_to_state(var: Variable, min_support: float = 0.5) -> TruckState:
             outside[p.id] = package
 
     packages = var.packages
+    placeable = [p for p in (*inside.values(), *outside.values()) if _placeable(p, var.trucks)]
     truck_state = TruckState(
         trucks=var.trucks,
         packages_inside=inside,
@@ -256,8 +267,8 @@ def variable_to_state(var: Variable, min_support: float = 0.5) -> TruckState:
         weight=[0] * len(var.trucks),
         min_support=min_support,
         track_eta=len({p.eta for p in packages}) > 1,
-        v_max=max((p.value for p in packages), default=1) or 1,
-        vw_max=max((p.value / p.weight for p in packages if p.weight > 0), default=1.0) or 1.0,
+        v_max=max((p.value for p in placeable), default=1) or 1,
+        vw_max=max((p.value / p.weight for p in placeable if p.weight > 0), default=1.0) or 1.0,
     )
 
     from . import state  # state mengimpor model, jadi impor di sini untuk menghindari siklus
