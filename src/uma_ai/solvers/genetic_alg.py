@@ -6,6 +6,8 @@ from uma_ai.core import model, obj_func, state
 from uma_ai.core.container import Container
 from uma_ai.core.params import GAParams, RunParams
 
+from .result import History, SearchResult
+
 
 @dataclass
 class DecodedState:
@@ -294,14 +296,14 @@ def run_ga(
     *,
     params: RunParams | None = None,
     rng: random.Random | None = None,
-    on_generation: Callable[[int, float, list[float]], None] | None = None,
+    on_generation: Callable[[int, float, list[float], list[DecodedState]], None] | None = None,
 ) -> tuple[list[int], DecodedState, float, int, int]:
     """
-    Menjalankan siklus Genetic Algorithm anti-clipping.
-    Argumen eksplisit menang atas params.ga, lalu default GAParams; mutation_rate None = 1/N.
-    rng default: random.Random(params.seed) jika ada seed, jika tidak modul random.
-    on_generation(generasi, fitness terbaik sejauh ini, fitness populasi) dipanggil tiap generasi.
-    Mengembalikan (kromosom_terbaik, decoded_state_terbaik, fitness_terbaik, total_weight, total_value).
+    Menjalankan Genetic Algorithm.
+
+    on_generation(generation, best_fitness, fitnesses, decoded_pop) call per generasi.
+    
+    returns (best_chromosome, best_decoded, best_fitness, total_weight, total_value).
     """
     ga = params.ga if params is not None else GAParams()
     objective = params.objective if params is not None else None
@@ -335,7 +337,7 @@ def run_ga(
             best_chromosome = population[gen_best_idx][:]
             best_decoded = decoded_pop[gen_best_idx]
         if on_generation is not None:
-            on_generation(gen, best_fitness, fitnesses)
+            on_generation(gen, best_fitness, fitnesses, decoded_pop)
 
         ranked = sorted(range(pop_size), key=lambda idx: fitnesses[idx], reverse=True)
         next_population: list[list[int]] = [best_chromosome[:]]
@@ -366,4 +368,34 @@ def run_ga(
         best_fitness,
         best_decoded.total_weight,
         best_decoded.total_value,
+    )
+
+
+def run(var: model.Variable, params: RunParams, rng: random.Random,
+        initial: model.TruckState | None = None) -> SearchResult:
+    """
+    `run_ga` dengan format hasil bersama (lihat result.py). `initial` diabaikan karena GA
+    berbasis populasi: state awal = individu terbaik generasi 0.
+    History per generasi: fitness maksimum dan rata-rata populasi, serta terbaik sejauh ini.
+    """
+    history = History("iteration", "value", "max", "mean", "best")
+    first: list[DecodedState] = []
+
+    def on_generation(gen, best_fitness, fitnesses, decoded_pop):
+        gen_max = max(fitnesses)
+        if gen == 0:
+            first.append(decoded_pop[fitnesses.index(gen_max)])
+        history.log(gen, gen_max, gen_max, sum(fitnesses) / len(fitnesses), best_fitness)
+
+    _, best_decoded, best_fitness, _, _ = run_ga(var, params=params, rng=rng, on_generation=on_generation)
+    initial_decoded = first[0]
+    return SearchResult(
+        algorithm="ga",
+        initial=initial_decoded.truck_state,
+        final=best_decoded.truck_state,
+        initial_value=evaluate_fitness(initial_decoded, params.objective),
+        final_value=best_fitness,
+        iterations=params.ga.generations,
+        history=history.as_dict(),
+        stats={"pop_size": params.ga.pop_size, "generations": params.ga.generations},
     )

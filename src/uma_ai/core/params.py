@@ -67,11 +67,12 @@ class GAParams(_Params):
 
 
 class HCParams(_Params):
-    variant: Literal["steepest", "sideways", "random_restart"] = "steepest"
+    variant: Literal["steepest", "stochastic", "sideways", "random_restart"] = "steepest"
     neighbors_per_step: int = 50
-    max_iterations: int = 10_000
-    max_sideways: int = 100
-    restarts: int = 10
+    max_iterations: int = 10_000  # batas pengaman per climb
+    max_sideways: int = 100       # sideways berturut-turut (reset setiap langkah naik)
+    max_restarts: int = 10
+    restart_base: Literal["steepest", "stochastic", "sideways"] = "steepest"  # climb tiap restart
 
 
 class SAParams(_Params):
