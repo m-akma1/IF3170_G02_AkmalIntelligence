@@ -103,8 +103,8 @@ def _lane_owners(package: model.PackageState, truck: model.TruckState, front: bo
     x0, y0, z0, x1, y1, z1 = geometry.bounds(package)
     container = _container(truck, package)
     if front:
-        return container.owners_in(x0, x1, 0, y0, z0, z1)
-    return container.owners_in(x0, x1, y1, container.length, z0, z1)
+        return container.lane_owners(x0, x1, 0, y0, z0, z1)
+    return container.lane_owners(x0, x1, y1, container.length, z0, z1)
 
 
 def eta_blocking_count(truck: model.TruckState, package: model.PackageState | None = None) -> int:

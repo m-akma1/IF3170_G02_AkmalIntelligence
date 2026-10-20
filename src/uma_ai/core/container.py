@@ -7,21 +7,28 @@ class Container:
     - `cols` merepresentasikan penampang bidang xy dengan z sebagai bitmask. Bit z = 1 untuk cols[x * length + y] jika sel (x, y, z) terisi.
     - `fragile` sama dengan `cols` untuk paket fragile saja. Bit z = 1 untuk fragile[x * length + y] jika sel (x, y, z) terisi oleh paket fragile.
     - `owner` menunjukkan paket yang menempati sel (x, y, z) di `owner[(x * length + y) * height + z] = package` atau None jika kosong.
+    - `top` menunjukkan z puncak paket yang menempati sel (x, y, z) di `top[(x * length + y) * height + z] = z_top`.
+    - `yend` (y end) menunjukkan y belakang paket yang menempati sel (x, y., z) di `yend[(x * length + y) * height + z] = y_end`.
+    - `rows` merepresentasikan penampang bidang xz dengan y sebagai bitmask. Bit y = 1 untuk rows[x * height + z] jika sel (x, y, z) terisi.
 
-    Overlap dan out of bounds dianggap hard constraint.
+        Overlap dan out of bounds dianggap hard constraint.
     """
-    __slots__ = ("width", "length", "height", "cols", "fragile", "owner")
+    __slots__ = ("width", "length", "height", "cols", "fragile", "rows", "owner", "top", "yend")
 
     def __init__(self, width: int, length: int, height: int):
         self.width, self.length, self.height = width, length, height
         self.cols = [0] * (width * length)
         self.fragile = [0] * (width * length)
+        self.rows = [0] * (width * height)
         self.owner: list[object | None] = [None] * (width * length * height)
+        self.top = [0] * (width * length * height)
+        self.yend = [0] * (width * length * height)
 
     def copy(self) -> Container:
         other = Container.__new__(Container)
         other.width, other.length, other.height = self.width, self.length, self.height
-        other.cols, other.fragile, other.owner = self.cols[:], self.fragile[:], self.owner[:]
+        other.cols, other.fragile, other.rows = self.cols[:], self.fragile[:], self.rows[:]
+        other.owner, other.top, other.yend = self.owner[:], self.top[:], self.yend[:]
         return other
 
     def in_bound(self, x: int, y: int, z: int, dx: int, dy: int, dz: int) -> bool:
@@ -33,9 +40,10 @@ class Container:
     def mark(self, package: object, x: int, y: int, z: int, dx: int, dy: int, dz: int, fragile: bool, on: bool):
         """Menandai (on=True) atau menghapus (on=False) sel paket. Tidak memeriksa overlap."""
         m = ((1 << dz) - 1) << z
-        cols, frg, owner = self.cols, self.fragile, self.owner
+        cols, fragile_bits, rows, owner, top, yend = self.cols, self.fragile, self.rows, self.owner, self.top, self.yend
         L, H = self.length, self.height
         who = package if on else None
+        z1, y1 = z + dz, y + dy
         for xx in range(x, x + dx):
             r = xx * L
             for yy in range(y, y + dy):
@@ -43,14 +51,22 @@ class Container:
                 if on:
                     cols[c] |= m
                     if fragile:
-                        frg[c] |= m
+                        fragile_bits[c] |= m
                 else:
                     cols[c] &= ~m
                     if fragile:
-                        frg[c] &= ~m
+                        fragile_bits[c] &= ~m
                 b = c * H
-                for zz in range(z, z + dz):
+                for zz in range(z, z1):
                     owner[b + zz] = who
+                    top[b + zz] = z1
+                    yend[b + zz] = y1
+            ym = ((1 << dy) - 1) << y
+            for zz in range(xx * H + z, xx * H + z1):
+                if on:
+                    rows[zz] |= ym
+                else:
+                    rows[zz] &= ~ym
 
     def mask(self, x: int, y: int, dx: int, dy: int) -> int:
         """OR seluruh kolom di alas (x, y, dx, dy)."""
@@ -103,19 +119,38 @@ class Container:
         if x0 >= x1 or y0 >= y1 or z0 >= z1:
             return found
         m = ((1 << (z1 - z0)) - 1) << z0
-        cols, owner = self.cols, self.owner
+        cols, owner, top = self.cols, self.owner, self.top
         L, H = self.length, self.height
         for xx in range(x0, x1):
             r = xx * L
             for yy in range(y0, y1):
                 c = r + yy
                 bits = cols[c] & m
-                if not bits:
-                    continue
                 b = c * H
-                for zz in range(z0, z1):
-                    if bits >> zz & 1:
-                        found.add(owner[b + zz])
+                while bits:
+                    zz = (bits & -bits).bit_length() - 1  # sel terisi terendah
+                    found.add(owner[b + zz])
+                    bits &= -1 << top[b + zz]             # lompati sisa paket itu
+        return found
+
+    def lane_owners(self, x0: int, x1: int, y0: int, y1: int, z0: int, z1: int) -> set:
+        """Sama dengan owners_in, tetapi memindai baris sepanjang y"""
+        x0, y0, z0 = max(x0, 0), max(y0, 0), max(z0, 0)
+        x1, y1, z1 = min(x1, self.width), min(y1, self.length), min(z1, self.height)
+        found = set()
+        if x0 >= x1 or y0 >= y1 or z0 >= z1:
+            return found
+        m = ((1 << (y1 - y0)) - 1) << y0
+        rows, owner, yend = self.rows, self.owner, self.yend
+        L, H = self.length, self.height
+        for xx in range(x0, x1):
+            for zz in range(z0, z1):
+                bits = rows[xx * H + zz] & m
+                while bits:
+                    yy = (bits & -bits).bit_length() - 1  # sel terisi terdekat ke pintu
+                    k = (xx * L + yy) * H + zz
+                    found.add(owner[k])
+                    bits &= -1 << yend[k]                 # lompati sisa paket itu
         return found
 
     def support_area(self, x: int, y: int, z: int, dx: int, dy: int) -> int:
@@ -138,13 +173,13 @@ class Container:
         if zl < 0 or zl >= self.height:
             return found
         bit = 1 << zl
-        frg, owner = self.fragile, self.owner
+        fragile, owner = self.fragile, self.owner
         L, H = self.length, self.height
         for xx in range(x, x + dx):
             r = xx * L
             for yy in range(y, y + dy):
                 c = r + yy
-                if frg[c] & bit:
+                if fragile[c] & bit:
                     found.add(owner[c * H + zl])
         return found
 
