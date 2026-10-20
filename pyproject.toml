@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "uma-ai"
-version = "0.0.1"
+version = "1.0"
 description = "IF3170 Project I: Local search to determine the most optimal package loading configuration for a container truck."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -16,6 +16,7 @@ authors = [
 keywords = ["ai", "local-search", "knapsack"]
 
 dependencies = [
+  "matplotlib>=3.8",
   "pydantic>=2.13.5",
   "viser",
 ]

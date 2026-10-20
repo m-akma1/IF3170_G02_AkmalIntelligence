@@ -33,15 +33,51 @@ python -m pip install -e ".[project]"
 3. Jalankan program dengan perintah berikut:
 
 ```sh
-python -m uma_ai.main <file-test-case> --param <file-param> [--no-server]
+python -m uma_ai.main <file-test-case> --param <file-param> [--algo ga|hc] [--no-server]
+python -m uma_ai.main --generate <file-generator> [--param <file-param>] [--algo ga|hc] [--no-server]
 ```
 
 Keterangan argumen:
 * `<file-test-case>`: Nama *test case* di [`data/input`](./data/input) atau *path* file JSON
 * `<file-param>`: Nama file parameter di [`data/param`](./data/param) atau *path* file JSON, dengan default [`data/param/default.json`](./data/param/default.json)
+* `--algo`: Algoritma yang dijalankan (`ga`, `hc`, `sa`), default `ga`. Varian *Hill Climbing* (`steepest`, `stochastic`, `sideways`, `random_restart`) diatur di `hc.variant` pada file parameter
+* `--generate`: Membuat *test case* acak dari konfigurasi di [`data/generator`](./data/generator) ke `data/input`, lalu langsung menjalankannya
 * `--no-server`: Menjalankan tanpa visualisasi (opsional)
 
 3. Program sudah berjalan dan output dapat dilihat langsung di folder [`output`](./output). Jika server dijalankan, dapat dibuka di [`http://localhost:8080`](http://localhost:8080). Kunjungi situs melalui browser untuk menggunakan program.
+
+### Eksperimen
+
+Satu *suite* eksperimen di [`data/experiment`](./data/experiment) berisi *test case*, parameter dasar, jumlah *run*, *seed*, dan daftar eksperimen (algoritma dan *override* parameter).
+
+```sh
+python -m uma_ai.experiment <suite> [--input <file-test-case>] [--jobs N] [--only <eksperimen> ...]
+```
+
+Pilihan variable `<suite>` untuk *suite* eksperimen:
+* `report`: semua varian *Hill Climbing*, *Simulated Annealing*, serta variasi jumlah generasi dan ukuran populasi GA, masing-masing 3 *run* pada `02_tc02`
+* `quick`: struktur yang sama dengan ukuran kecil untuk uji cepat
+* `compare`: semua algoritma dengan ukuran sedang, untuk dijalankan pada *test case* hasil *generator* (`--input`)
+* `--jobs N`: menjalankan *run* secara paralel. Durasi menjadi kurang akurat, jadi gunakan 1 (*default*) untuk hasil laporan
+
+*Run* ke-*k* memakai *seed* `seed + k - 1`. Semua varian HC (dan SA) pada *run* yang sama mulai dari *state* awal yang sama. Hasil disimpan di `output/experiment/<suite>/` (atau `<suite>_<input>/` jika `--input` dipakai):
+
+* `<eksperiment_name>/run_<k>/initial.json`: nilai state awal (format sama dengan input)
+* `<eksperiment_name>/run_<k>/final.json`: nilai state akhir
+* `<eksperiment_name>/run_<k>/history.csv`: nilai objective (dan kolom lain per algoritma) per iterasi
+* `<eksperiment_name>/run_<k>/summary.json`: nilai awal/akhir, durasi, iterasi, statistik algoritma, parameter
+* `<eksperiment_name>/run_<k>/objective.png`: plot objective terhadap iterasi (GA: maksimum dan rata-rata populasi)
+* `<eksperiment_name>/run_<k>/accept_prob.png`: (SA) plot $e^(\delta \frac{E}{T})$ terhadap iterasi
+* `<eksperiment_name>/overlay.png`: semua run dalam satu plot
+* `summary.csv`: satu baris per run, untuk tabel laporan
+
+### Generator Test Case
+
+Konfigurasi di [`data/generator`](./data/generator) mengatur truk (dimensi, kapasitas, jumlah), jumlah paket (`n_packages`) atau rasio volume (`volume_ratio`), rasio berat (`weight_ratio`), serta kelas paket. Tiap kelas memiliki distribusi ukuran, nilai atau nilai per volume, berat atau berat per volume, ETA, dan peluang *fragile*. Distribusi dapat berupa `uniform` (cukup `[min, max]`), `triangular`, `normal`, atau `lognormal`. Paket kustom dapat ditambahkan melalui `extra_packages`.
+
+```sh
+python -m uma_ai.experiment.generator <file-generator> ... [--seed N] [--out <path>]
+```
 
 ## Pembagian Kerja
 
