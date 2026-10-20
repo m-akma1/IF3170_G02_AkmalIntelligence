@@ -1,0 +1,81 @@
+{
+  "seed": 3170,
+  "trucks": [
+    {
+      "dimension": {
+        "w": 10,
+        "l": 10,
+        "h": 10
+      },
+      "max_capacity": 1500
+    }
+  ],
+  "n_packages": 80,
+  "classes": [
+    {
+      "name": "tiny",
+      "share": 0.4,
+      "side": [
+        1,
+        2
+      ],
+      "value_density": [
+        8,
+        20
+      ],
+      "weight_density": [
+        2,
+        5
+      ],
+      "fragile_prob": 0.05,
+      "eta": [
+        0,
+        5
+      ]
+    },
+    {
+      "name": "small",
+      "share": 0.45,
+      "side": [
+        2,
+        4
+      ],
+      "value_density": {
+        "low": 2,
+        "high": 8,
+        "dist": "triangular",
+        "mode": 4
+      },
+      "weight_density": [
+        1,
+        2
+      ],
+      "fragile_prob": 0.15,
+      "eta": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "fragile",
+      "share": 0.15,
+      "side": [
+        2,
+        4
+      ],
+      "value_density": [
+        5,
+        10
+      ],
+      "weight_density": [
+        0.5,
+        1
+      ],
+      "fragile_prob": 1.0,
+      "eta": [
+        0,
+        5
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "seed": 3170,
+  "trucks": [
+    {
+      "dimension": {
+        "w": 12,
+        "l": 20,
+        "h": 10
+      },
+      "max_capacity": 3000
+    },
+    {
+      "dimension": {
+        "w": 10,
+        "l": 16,
+        "h": 10
+      },
+      "max_capacity": 2000
+    }
+  ],
+  "n_packages": 300,
+  "classes": [
+    {
+      "name": "tiny",
+      "share": 0.35,
+      "side": [
+        1,
+        2
+      ],
+      "value_density": [
+        8,
+        20
+      ],
+      "weight_density": [
+        2,
+        5
+      ],
+      "fragile_prob": 0.05,
+      "eta": [
+        0,
+        5
+      ]
+    },
+    {
+      "name": "small",
+      "share": 0.35,
+      "side": [
+        2,
+        4
+      ],
+      "value_density": [
+        2,
+        6
+      ],
+      "weight_density": [
+        1,
+        2
+      ],
+      "fragile_prob": 0.15,
+      "eta": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "medium",
+      "share": 0.2,
+      "side": [
+        3,
+        6
+      ],
+      "value_density": [
+        1.5,
+        3
+      ],
+      "weight_density": [
+        0.8,
+        1.6
+      ],
+      "fragile_prob": 0.2,
+      "eta": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "long",
+      "share": 0.1,
+      "width": [
+        1,
+        2
+      ],
+      "length": [
+        8,
+        16
+      ],
+      "height": [
+        1,
+        2
+      ],
+      "value_density": [
+        3,
+        6
+      ],
+      "weight_density": [
+        0.5,
+        1
+      ],
+      "eta": [
+        0,
+        5
+      ]
+    }
+  ]
+}

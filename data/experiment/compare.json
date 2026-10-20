@@ -1,0 +1,59 @@
+{
+  "input": "03_gen_small",
+  "param": "default",
+  "runs": 3,
+  "seed": 3170,
+  "experiments": [
+    {
+      "name": "hc_steepest",
+      "algorithm": "hc",
+      "override": {
+        "hc": {
+          "variant": "steepest"
+        }
+      }
+    },
+    {
+      "name": "hc_stochastic",
+      "algorithm": "hc",
+      "override": {
+        "hc": {
+          "variant": "stochastic"
+        }
+      }
+    },
+    {
+      "name": "hc_sideways",
+      "algorithm": "hc",
+      "override": {
+        "hc": {
+          "variant": "sideways"
+        }
+      }
+    },
+    {
+      "name": "hc_restart",
+      "algorithm": "hc",
+      "override": {
+        "hc": {
+          "variant": "random_restart",
+          "max_restarts": 5
+        }
+      }
+    },
+    {
+      "name": "sa",
+      "algorithm": "sa"
+    },
+    {
+      "name": "ga",
+      "algorithm": "ga",
+      "override": {
+        "ga": {
+          "pop_size": 30,
+          "generations": 50
+        }
+      }
+    }
+  ]
+}

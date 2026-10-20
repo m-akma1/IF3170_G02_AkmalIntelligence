@@ -1,0 +1,114 @@
+{
+  "seed": 3170,
+  "trucks": [
+    {
+      "dimension": {
+        "w": 15,
+        "l": 15,
+        "h": 15
+      },
+      "max_capacity": 2000
+    }
+  ],
+  "n_packages": 200,
+  "weight_ratio": 4.0,
+  "classes": [
+    {
+      "name": "dense_iron",
+      "share": 0.4,
+      "side": [
+        2,
+        4
+      ],
+      "value": [
+        10,
+        80
+      ],
+      "weight_density": [
+        10,
+        25
+      ],
+      "eta": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "small",
+      "share": 0.4,
+      "side": [
+        2,
+        4
+      ],
+      "value_density": [
+        2,
+        6
+      ],
+      "weight_density": [
+        1,
+        2
+      ],
+      "fragile_prob": 0.15,
+      "eta": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "light_gold",
+      "share": 0.2,
+      "side": [
+        2,
+        3
+      ],
+      "value": [
+        200,
+        800
+      ],
+      "weight": [
+        1,
+        10
+      ],
+      "eta": [
+        0,
+        3
+      ]
+    }
+  ],
+  "extra_packages": [
+    {
+      "id": "trap_heavy",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 10,
+      "weight": 2000,
+      "is_fragile": false,
+      "eta": 5
+    },
+    {
+      "id": "trap_oversize",
+      "dimension": {
+        "w": 5,
+        "l": 16,
+        "h": 5
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 9999,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 0
+    }
+  ]
+}

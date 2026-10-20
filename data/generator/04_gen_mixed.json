@@ -1,0 +1,196 @@
+{
+  "seed": 3170,
+  "trucks": [
+    {
+      "dimension": {
+        "w": 20,
+        "l": 20,
+        "h": 20
+      },
+      "max_capacity": 6000
+    }
+  ],
+  "volume_ratio": 2.0,
+  "weight_ratio": 2.5,
+  "classes": [
+    {
+      "name": "tiny",
+      "share": 0.3,
+      "side": [
+        1,
+        2
+      ],
+      "value_density": [
+        8,
+        20
+      ],
+      "weight_density": [
+        2,
+        5
+      ],
+      "fragile_prob": 0.05,
+      "eta": [
+        0,
+        5
+      ]
+    },
+    {
+      "name": "small",
+      "share": 0.25,
+      "side": [
+        2,
+        4
+      ],
+      "value_density": [
+        2,
+        6
+      ],
+      "weight_density": [
+        1,
+        2
+      ],
+      "fragile_prob": 0.15,
+      "eta": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "medium",
+      "share": 0.15,
+      "side": {
+        "low": 4,
+        "high": 7,
+        "dist": "normal"
+      },
+      "value_density": [
+        1.5,
+        3
+      ],
+      "weight_density": [
+        0.8,
+        1.6
+      ],
+      "fragile_prob": 0.2,
+      "eta": {
+        "low": 0,
+        "high": 10,
+        "dist": "triangular",
+        "mode": 6
+      }
+    },
+    {
+      "name": "large",
+      "share": 0.05,
+      "side": [
+        7,
+        12
+      ],
+      "value_density": [
+        0.8,
+        1.8
+      ],
+      "weight_density": [
+        0.4,
+        0.9
+      ],
+      "fragile_prob": 0.1,
+      "eta": [
+        0,
+        15
+      ]
+    },
+    {
+      "name": "flat_plate",
+      "share": 0.05,
+      "width": [
+        6,
+        18
+      ],
+      "length": [
+        4,
+        12
+      ],
+      "height": [
+        1,
+        1
+      ],
+      "value_density": [
+        0.6,
+        1.2
+      ],
+      "weight_density": [
+        0.1,
+        0.2
+      ],
+      "fragile_prob": 0.2,
+      "eta": [
+        0,
+        5
+      ]
+    },
+    {
+      "name": "fragile",
+      "share": 0.08,
+      "side": [
+        2,
+        5
+      ],
+      "value_density": [
+        4,
+        10
+      ],
+      "weight_density": [
+        0.5,
+        1
+      ],
+      "fragile_prob": 1.0,
+      "eta": [
+        0,
+        5
+      ]
+    },
+    {
+      "name": "dense_iron",
+      "share": 0.06,
+      "side": [
+        2,
+        4
+      ],
+      "value": [
+        10,
+        80
+      ],
+      "weight_density": [
+        10,
+        25
+      ],
+      "eta": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "light_gold",
+      "share": 0.06,
+      "side": [
+        2,
+        4
+      ],
+      "value": {
+        "low": 200,
+        "high": 800,
+        "dist": "lognormal",
+        "sigma": 0.4
+      },
+      "weight": [
+        1,
+        10
+      ],
+      "eta": [
+        0,
+        3
+      ]
+    }
+  ]
+}

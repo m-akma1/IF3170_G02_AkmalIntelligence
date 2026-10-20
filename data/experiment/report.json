@@ -1,0 +1,108 @@
+{
+  "input": "02_tc02",
+  "param": "default",
+  "runs": 3,
+  "seed": 3170,
+  "experiments": [
+    {
+      "name": "hc_steepest",
+      "algorithm": "hc",
+      "override": {
+        "hc": {
+          "variant": "steepest"
+        }
+      }
+    },
+    {
+      "name": "hc_stochastic",
+      "algorithm": "hc",
+      "override": {
+        "hc": {
+          "variant": "stochastic"
+        }
+      }
+    },
+    {
+      "name": "hc_sideways",
+      "algorithm": "hc",
+      "override": {
+        "hc": {
+          "variant": "sideways"
+        }
+      }
+    },
+    {
+      "name": "hc_restart",
+      "algorithm": "hc",
+      "override": {
+        "hc": {
+          "variant": "random_restart"
+        }
+      }
+    },
+    {
+      "name": "sa",
+      "algorithm": "sa"
+    },
+    {
+      "name": "ga_pop50_gen50",
+      "algorithm": "ga",
+      "override": {
+        "ga": {
+          "pop_size": 50,
+          "generations": 50
+        }
+      }
+    },
+    {
+      "name": "ga_pop50_gen100",
+      "algorithm": "ga",
+      "override": {
+        "ga": {
+          "pop_size": 50,
+          "generations": 100
+        }
+      }
+    },
+    {
+      "name": "ga_pop50_gen200",
+      "algorithm": "ga",
+      "override": {
+        "ga": {
+          "pop_size": 50,
+          "generations": 200
+        }
+      }
+    },
+    {
+      "name": "ga_gen100_pop25",
+      "algorithm": "ga",
+      "override": {
+        "ga": {
+          "pop_size": 25,
+          "generations": 100
+        }
+      }
+    },
+    {
+      "name": "ga_gen100_pop50",
+      "algorithm": "ga",
+      "override": {
+        "ga": {
+          "pop_size": 50,
+          "generations": 100
+        }
+      }
+    },
+    {
+      "name": "ga_gen100_pop100",
+      "algorithm": "ga",
+      "override": {
+        "ga": {
+          "pop_size": 100,
+          "generations": 100
+        }
+      }
+    }
+  ]
+}
