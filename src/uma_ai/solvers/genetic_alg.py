@@ -15,9 +15,9 @@ class DecodedState:
     truck_state: model.TruckState
     grid_occupied: list[Container]   # indeks okupansi per truk
     package_occupied: list[bool]     # per paket, urutan input
-    total_weight: int
-    total_value: int
-    clip_count: int = 0              # decoder tidak pernah menghasilkan overlap
+    total_weight: int                # total berat
+    total_value: int                 # total nilai yang terakumulasi
+    clip_count: int = 0              # total yang terjadi klip
 
 
 # Helper Bounds
@@ -259,7 +259,7 @@ def mutate(chromosome: list[int], var: model.Variable, mutation_rate: float = 0.
         base = 4 * i
         pkg = var.packages[i]
 
-        # jika orientasi atau posisi (x, y) terkena mutasi, generate ulang dalam batas aman
+        # jika orientasi atau posisi (x, y) terkena mutasi generate ulang dalam batas aman 
         if rng.random() < mutation_rate:
             if shift > 0 and rng.random() < 0.5:
                 chromosome[base] = max(0, chromosome[base] + rng.randint(-shift, shift))
@@ -299,10 +299,8 @@ def run_ga(
     on_generation: Callable[[int, float, list[float], list[DecodedState]], None] | None = None,
 ) -> tuple[list[int], DecodedState, float, int, int]:
     """
-    Menjalankan Genetic Algorithm.
-
+    Menjalankan Genetic Algorithm
     on_generation(generation, best_fitness, fitnesses, decoded_pop) call per generasi.
-    
     returns (best_chromosome, best_decoded, best_fitness, total_weight, total_value).
     """
     ga = params.ga if params is not None else GAParams()
