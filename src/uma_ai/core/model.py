@@ -189,7 +189,7 @@ class TruckState:
     compactness: float = 0.0
 
     # Pengaturan yang memengaruhi total di atas
-    support_tau: float = 0.5 # Batas minimum persentase alas paket (variant)
+    min_support: float = 0.5 # Batas minimum persentase alas paket (variant)
     track_eta: bool = True
 
     # Skala untuk normalisasi penalti objective function
@@ -201,7 +201,7 @@ class TruckState:
         return package if package is not None else self.packages_outside.get(package_id)
 
 
-def variable_to_state(var: Variable, support_tau: float = 0.5) -> TruckState:
+def variable_to_state(var: Variable, min_support: float = 0.5) -> TruckState:
     """
     Paket dengan `is_inside` dimuat di posisi `pos` pada truk `truck_id` (default 0),
     sehingga hasil `writeJSON` bisa dibaca ulang sebagai state.
@@ -254,7 +254,7 @@ def variable_to_state(var: Variable, support_tau: float = 0.5) -> TruckState:
         ids=[p.id for p in packages],
         containers=containers,
         weight=[0] * len(var.trucks),
-        support_tau=support_tau,
+        min_support=min_support,
         track_eta=len({p.eta for p in packages}) > 1,
         v_max=max((p.value for p in packages), default=1) or 1,
         vw_max=max((p.value / p.weight for p in packages if p.weight > 0), default=1.0) or 1.0,

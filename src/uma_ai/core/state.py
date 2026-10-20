@@ -57,11 +57,11 @@ def _restore_totals(truck: model.TruckState, totals: tuple):
 
 
 def _support_terms(truck: model.TruckState, package: model.PackageState) -> tuple[int, float]:
-    """Persentase tumpuan terhadap support_tau untuk satu paket."""
+    """Persentase tumpuan terhadap min_support untuk satu paket."""
     dx, dy, _ = geometry.extents(package)
     supported = truck.containers[package.truck_id].support_area(package.x, package.y, package.z, dx, dy)
     floating = 1 if package.z > 0 and supported == 0 else 0
-    return floating, max(0.0, truck.support_tau - supported / (dx * dy))
+    return floating, max(0.0, truck.min_support - supported / (dx * dy))
 
 
 def _add_support(truck: model.TruckState, packages, sign: int):
@@ -384,8 +384,8 @@ def switch_pos(
 
 # Pembentukan dan perbaikan state
 
-def _empty_state(var: model.Variable, support_tau: float) -> model.TruckState:
-    truck = model.variable_to_state(var, support_tau)
+def _empty_state(var: model.Variable, min_support: float) -> model.TruckState:
+    truck = model.variable_to_state(var, min_support)
     for p in list(truck.packages_inside.values()):
         _lift(truck, p)
     return truck
@@ -398,7 +398,7 @@ def random_state(
     tries: int = 5,
     p_in: float = 1.0,
     weight_ratio: float | None = 1.0,
-    support_tau: float = 0.5,
+    min_support: float = 0.5,
 ) -> model.TruckState:
     """
     State awal acak.
@@ -409,7 +409,7 @@ def random_state(
     mode="ep": urutan dan orientasi acak, ditempatkan dengan `pack` (jauh lebih padat).
     """
     rng = rng or random.Random()
-    truck = _empty_state(var, support_tau)
+    truck = _empty_state(var, min_support)
     order = list(truck.ids)
     rng.shuffle(order)
 
