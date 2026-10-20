@@ -16,7 +16,7 @@ class ObjectiveParams(_Params):
     kecuali berat: c_weight x vw_max (rasio nilai/berat terbesar) per unit kelebihan berat.
     Dengan c = 1, satu pelanggaran selalu lebih mahal dari paket mana pun.
     """
-    variant: Literal[1, 2, 3, 4, 5] = 3
+    variant: Literal[1, 2, 3, 4, 5, 6] = 3
     c_floating: float = 1.0
     c_fragile: float = 1.0
     c_weight: float = 1.0
