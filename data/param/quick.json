@@ -1,0 +1,7 @@
+{
+  "seed": 3170,
+  "ga": {
+    "pop_size": 10,
+    "generations": 5
+  }
+}

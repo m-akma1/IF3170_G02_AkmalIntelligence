@@ -1,0 +1,157 @@
+{
+  "truck": {
+    "dimension": {
+      "w": 5,
+      "l": 8,
+      "h": 8
+    },
+    "max_capacity": 500,
+    "objective_value": 200.0
+  },
+  "packages": [
+    {
+      "id": "pack_1",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 10,
+      "weight": 10,
+      "is_fragile": true,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 2,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "pack_2",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 20,
+      "weight": 20,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 5,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "pack_3",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 50,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 7,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "pack_4",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 20,
+      "weight": 10,
+      "is_fragile": true,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "pack_5",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 50,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 2,
+        "z": 1
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "pack_6",
+      "dimension": {
+        "w": 5,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 50,
+      "weight": 10,
+      "is_fragile": true,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 4,
+        "z": 5
+      },
+      "truck_id": 0
+    }
+  ]
+}
