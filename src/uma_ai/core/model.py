@@ -68,6 +68,8 @@ class Package(BaseModel):
 
 
 class Truck(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    
     dim: Dimension = Field(...,alias="dimension")
     max_capacity: int
 
@@ -95,8 +97,8 @@ def readJSON(path: str) -> Variable:
 
 def writeJSON(path: str, var: Variable):
     data = {
-        "truck": var.truck.model_dump(),
-        "packages": [package.model_dump() for package in var.packages],
+        "truck": var.truck.model_dump(by_alias=True),
+        "packages": [package.model_dump(by_alias=True) for package in var.packages],
     }
 
     with open(path, "w", encoding="utf-8") as file:
@@ -147,9 +149,9 @@ def variable_to_state(var: Variable) -> TruckState:
             length=p.dim.length,
             height=p.dim.height,
             orientation_id=orient_id,
-            x=-1,
-            y=-1,
-            z=-1,
+            x=p.pos.x if p.pos else -1,
+            y=p.pos.y if p.pos else -1,
+            z=p.pos.z if p.pos else -1,
             value=p.value,
             weight=p.weight,
             is_fragile=p.is_fragile,
