@@ -138,7 +138,8 @@ def is_overweight(truck: model.TruckState, package: model.PackageState | None = 
     Jika package diberikan, hanya truk tempat paket tersebut dimasukkan yang diperiksa,
     dan berat paket ditambahkan bila paket belum ada di dalam truk tersebut.
 
-    Kasus khusus truk 0 (di luar truk) maka pasti 0 karena kapasitas infinite.
+    Jika paket di luar truk (truck_id = -1), diperiksa apakah memasukkannya ke truk 0
+    akan melebihi kapasitas truk 0.
     """
     if package is None:
         return overweight_amount(truck) > 0

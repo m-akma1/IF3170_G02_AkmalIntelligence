@@ -76,7 +76,7 @@ def _drops(truck: model.TruckState, move: Move) -> bool:
         if not 0 <= t < len(truck.containers):
             return False
         c = truck.containers[t]
-        dx, dy, dz = p.ext[o]
+        dx, dy, dz = p.extents[o]
         if dx > c.width or dy > c.length or dz > c.height:
             return False
         x, y = min(max(x, 0), c.width - dx), min(max(y, 0), c.length - dy)

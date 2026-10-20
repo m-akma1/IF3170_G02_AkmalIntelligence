@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import copy
+import dataclasses
 import random
 from bisect import bisect_left, insort
 from dataclasses import dataclass
@@ -384,11 +386,31 @@ def switch_pos(
 
 # Pembentukan dan perbaikan state
 
-def _empty_state(var: model.Variable, min_support: float) -> model.TruckState:
+def empty_state(var: model.Variable, min_support: float = 0.5) -> model.TruckState:
+    """State dengan semua paket di luar truk (posisi pada input diabaikan)."""
     truck = model.variable_to_state(var, min_support)
     for p in list(truck.packages_inside.values()):
         _lift(truck, p)
     return truck
+
+
+def copy_state(truck: model.TruckState) -> model.TruckState:
+    """Salinan independen (paket, grid, dan total)"""
+    clones = {id: copy.copy(truck.find(id)) for id in truck.ids}
+    remap = {id(truck.find(pid)): c for pid, c in clones.items()}
+    containers = []
+    for c in truck.containers:
+        other = c.copy()
+        other.owner = [remap[id(o)] if o is not None else None for o in other.owner]
+        containers.append(other)
+    return dataclasses.replace(
+        truck,
+        packages_inside={pid: clones[pid] for pid in truck.packages_inside},
+        packages_outside={pid: clones[pid] for pid in truck.packages_outside},
+        ids=list(truck.ids),
+        containers=containers,
+        weight=list(truck.weight),
+    )
 
 
 def random_state(
@@ -409,7 +431,7 @@ def random_state(
     mode="ep": urutan dan orientasi acak, ditempatkan dengan `pack` (jauh lebih padat).
     """
     rng = rng or random.Random()
-    truck = _empty_state(var, min_support)
+    truck = empty_state(var, min_support)
     order = list(truck.ids)
     rng.shuffle(order)
 

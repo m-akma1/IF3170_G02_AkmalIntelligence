@@ -1,17 +1,30 @@
+"""
+Genetic Algorithm dengan kromosom 4N: (x, y, orient, sequence) per paket, urutan paket sama dengan input.
+
+Decoder menempatkan paket berurutan sesuai sequence lewat `state.pack`: (x, y, orient) dipakai
+sebagai preferensi dengan gravitasi, lalu extreme point terdekat, lalu truk berikutnya.
+Hasil decode selalu valid (tidak overlap, tertumpu, fragile dan berat terpenuhi).
+
+Semua operator menerima `rng` (default modul random, jadi random.seed tetap berlaku).
+"""
 import random
+from collections.abc import Callable
 from dataclasses import dataclass
-from core import model, geometry, constraints, state, obj_func
+
+from uma_ai.core import model, obj_func, state
+from uma_ai.core.container import Container
+from uma_ai.core.params import GAParams, RunParams
 
 
 @dataclass
 class DecodedState:
     """Membuat data hasil tranlasi kromosom ke bentuk fisik kontainer"""
     truck_state: model.TruckState
-    grid_occupied: list[list[list[bool]]]
-    package_occupied: list[bool]
+    grid_occupied: list[Container]   # indeks okupansi per truk
+    package_occupied: list[bool]     # per paket, urutan input
     total_weight: int
     total_value: int
-    clip_count: int = 0
+    clip_count: int = 0              # decoder tidak pernah menghasilkan overlap
 
 
 # Helper Bounds
@@ -39,7 +52,17 @@ def _get_safe_bounds(
     return truck_dim.width - dx, truck_dim.length - dy, truck_dim.height - dz
 
 
-def _random_valid_gene(pkg: model.Package, truck_dim: model.Dimension) -> tuple[int, int, int]:
+def _largest_dim(var: model.Variable) -> model.Dimension:
+    """Gen (x, y) diambil dalam truk terbesar; decoder menjepitnya ke tiap truk."""
+    return model.Dimension(
+        width=max(t.dim.width for t in var.trucks),
+        length=max(t.dim.length for t in var.trucks),
+        height=max(t.dim.height for t in var.trucks),
+    )
+
+
+def _random_valid_gene(pkg: model.Package, truck_dim: model.Dimension,
+                       rng: random.Random = random) -> tuple[int, int, int]:
     """Memilih (x, y, orient_id) yang dijamin tidak keluar dari dinding truk."""
     valid_orients = [
         o for o in range(len(model.ORIENTATION))
@@ -49,209 +72,87 @@ def _random_valid_gene(pkg: model.Package, truck_dim: model.Dimension) -> tuple[
         # paket memang lebih besar dari truk di semua orientasi
         return 0, 0, 0
 
-    o_i = random.choice(valid_orients)
+    o_i = rng.choice(valid_orients)
     bounds = _get_safe_bounds(pkg, o_i, truck_dim)
     assert bounds is not None
     max_x, max_y, _ = bounds
 
-    return random.randint(0, max_x), random.randint(0, max_y), o_i
+    return rng.randint(0, max_x), rng.randint(0, max_y), o_i
 
 
-def create_chromosome(var: model.Variable) -> list[int]:
-    """Membuat kromosom 4N yang sejak awal bebas out-of-bounds."""
+def create_chromosome(var: model.Variable, rng: random.Random = random, sequences: list[int] | None = None) -> list[int]:
+    """Membuat kromosom 4N yang sejak awal bebas out-of-bounds. sequences: urutan tetap (default acak)."""
     n = len(var.packages)
-    sequences = list(range(1, n + 1))
-    random.shuffle(sequences)
+    if sequences is None:
+        sequences = list(range(1, n + 1))
+        rng.shuffle(sequences)
 
+    dim = _largest_dim(var)
     chromosome: list[int] = []
     for i in range(n):
-        x_i, y_i, o_i = _random_valid_gene(var.packages[i], var.truck.dim)
+        x_i, y_i, o_i = _random_valid_gene(var.packages[i], dim, rng)
         s_i = sequences[i]
         chromosome.extend([x_i, y_i, o_i, s_i])
 
     return chromosome
 
 
-def init_population(var: model.Variable, pop_size: int) -> list[list[int]]:
-    """Membuat populasi awal sebanyak pop_size individu."""
-    return [create_chromosome(var) for _ in range(pop_size)]
+def _eta_sequences(var: model.Variable, rng: random.Random) -> list[int]:
+    """Sequence urut ETA naik (acak untuk ETA sama): decoder mengisi dari pintu, jadi yang turun duluan di depan."""
+    order = sorted(range(len(var.packages)), key=lambda i: (var.packages[i].eta, rng.random()))
+    sequences = [0] * len(order)
+    for rank, i in enumerate(order, start=1):
+        sequences[i] = rank
+    return sequences
+
+
+def init_population(var: model.Variable, pop_size: int, rng: random.Random = random,
+                    eta_seed_frac: float = 0.0) -> list[list[int]]:
+    """Membuat populasi awal sebanyak pop_size individu (sebagian diurutkan berdasarkan ETA)."""
+    n_seeded = int(round(eta_seed_frac * pop_size))
+    return [
+        create_chromosome(var, rng, _eta_sequences(var, rng) if k < n_seeded else None)
+        for k in range(pop_size)
+    ]
 
 
 
-# Decoding dengan anticlipping
-
-def _is_box_free(
-    grid: list[list[list[bool]]],
-    x0: int, y0: int, z0: int,
-    dx: int, dy: int, dz: int
-) -> bool:
-    """Mengecek apakah ruang 3D pada [x0..x0+dx, y0..y0+dy, z0..z0+dz] kosong."""
-    for x in range(x0, x0 + dx):
-        for y in range(y0, y0 + dy):
-            for z in range(z0, z0 + dz):
-                if grid[x][y][z]:
-                    return False
-    return True
+# Decoding
 
 
-def _is_box_supported(
-    grid: list[list[list[bool]]],
-    x0: int, y0: int, z0: int,
-    dx: int, dy: int
-) -> bool:
-    """Mengecek apakah alas paket menyentuh lantai (z0 == 0) atau disangga minimal 1 blok di bawahnya."""
-    if z0 == 0:
-        return True
-    z_below = z0 - 1
-    for x in range(x0, x0 + dx):
-        for y in range(y0, y0 + dy):
-            if grid[x][y][z_below]:
-                return True
-    return False
-
-
-def _fill_box(
-    grid: list[list[list[bool]]],
-    x0: int, y0: int, z0: int,
-    dx: int, dy: int, dz: int,
-    val: bool = True
-):
-    """Mengisi grid matrix dengan nilai boolean (True saat paket ditaruh)."""
-    for x in range(x0, x0 + dx):
-        for y in range(y0, y0 + dy):
-            for z in range(z0, z0 + dz):
-                grid[x][y][z] = val
-
-
-def _find_lowest_z_at_xy(
-    grid: list[list[list[bool]]],
-    truck_state: model.TruckState,
-    pkg_state: model.PackageState,
-    x: int, y: int,
-    dx: int, dy: int, dz: int,
-    h: int
-) -> int | None:
+def decode_chromosome(chromosome: list[int], var: model.Variable,
+                      template: model.TruckState | None = None,
+                      max_candidates: int | None = 64) -> DecodedState:
     """
-    Scan dari atas (h - dz) ke bawah (0) pada titik (x, y).
-    Mengembalikan z valid terendah, atau None jika kolom (x, y) penuh/terhalang.
-    """
-    lowest_valid_z = None
-    for z in range(h - dz, -1, -1):
-        # tidak tabrakan/clipping dengan paket lain
-        if not _is_box_free(grid, x, y, z, dx, dy, dz):
-            continue
+    Decoder bebas clipping lewat `state.pack`:
+    1. Urutkan paket berdasarkan gen sequence.
+    2. Lewati paket yang membuat truk overweight.
+    3. Coba (x, y, orient) gen dengan gravitasi (x, y dijepit ke dalam truk).
+    4. Jika gagal, coba extreme point terdekat, lalu truk berikutnya.
+    5. Jika tetap tidak muat, paket tetap di packages_outside.
 
-        # tertumpu di lantai (z=0) atau di atas paket lain
-        if not _is_box_supported(grid, x, y, z, dx, dy):
-            continue
-
-        # tidak menindih paket fragile
-        pkg_state.x, pkg_state.y, pkg_state.z = x, y, z
-        if not constraints.is_fragile_valid(truck_state, pkg_state):
-            continue
-
-        lowest_valid_z = z
-
-    pkg_state.x, pkg_state.y, pkg_state.z = state.OUTSIDE
-    return lowest_valid_z
-
-
-def decode_chromosome(chromosome: list[int], var: model.Variable) -> DecodedState:
-    """
-    Decoder bebas clipping:
-    1. Cek kapasitas berat terlebih dahulu (cegah overweight).
-    2. Clamp (x, y) agar di dalam dinding truk.
-    3. Coba taruh di (clamped_x, clamped_y).
-    4. Jika penuh/clipping di titik tersebut, geser cari titik (x', y') terdekat yang kosong.
-    5. Jika seluruh ruang truk sudah tidak muat, taruh dengan aman di packages_outside.
+    template: state kosong untuk disalin (lebih cepat daripada membangun dari var setiap decode).
     """
     n = len(var.packages)
-    w = var.truck.dim.width
-    l = var.truck.dim.length
-    h = var.truck.dim.height
+    truck_state = state.copy_state(template) if template is not None else state.empty_state(var)
 
-    truck_state = model.variable_to_state(var)
-    for pkg_id in list(truck_state.packages_inside.keys()):
-        state.put_outside(pkg_id, truck_state, skip_check=True)
-
-    grid_occupied = [[[False for _ in range(h)] for _ in range(l)] for _ in range(w)]
-    package_occupied = [False] * n
-
+    prefs = {}
     genes = []
     for i in range(n):
         base = 4 * i
-        genes.append((
-            chromosome[base + 3],  # s_i (sequence)
-            i,                     # index paket
-            chromosome[base],      # x_i
-            chromosome[base + 1],  # y_i
-            chromosome[base + 2],  # o_i
-        ))
+        pkg_id = var.packages[i].id
+        prefs[pkg_id] = (chromosome[base], chromosome[base + 1], chromosome[base + 2])
+        genes.append((chromosome[base + 3], pkg_id))
+    genes.sort()
 
-    genes.sort(key=lambda item: item[0])
-
-    for s_i, idx, x_i, y_i, o_i in genes:
-        pkg_id = var.packages[idx].id
-        pkg_state = truck_state.packages_outside[pkg_id]
-
-        # cegah pelanggaran berat truk sejak awal
-        if constraints.is_overweight(truck_state, pkg_state):
-            continue
-
-        pkg_state.orientation_id = o_i
-        dx, dy, dz = geometry.extents(pkg_state)
-
-        # lewati orientasi melebihi ukuran truk
-        if dx > w or dy > l or dz > h:
-            continue
-
-        clamped_x = max(0, min(x_i, w - dx))
-        clamped_y = max(0, min(y_i, l - dy))
-
-        # coba taruh tepat di koordinat gen (clamped_x, clamped_y)
-        target_x, target_y = clamped_x, clamped_y
-        best_z = _find_lowest_z_at_xy(
-            grid_occupied, truck_state, pkg_state,
-            target_x, target_y, dx, dy, dz, h
-        )
-
-        # Fallback Anti-Clipping jika di (clamped_x, clamped_y) penuh,
-        # geser cari koordinat (cx, cy) terdekat yang masih punya ruang kosong
-        if best_z is None:
-            candidate_coords = [
-                (cx, cy)
-                for cx in range(w - dx + 1)
-                for cy in range(l - dy + 1)
-                if (cx, cy) != (clamped_x, clamped_y)
-            ]
-            # urutkan dari yang jarak pergeserannya paling dekat dengan (clamped_x, clamped_y)
-            candidate_coords.sort(key=lambda pt: abs(pt[0] - clamped_x) + abs(pt[1] - clamped_y))
-
-            for cx, cy in candidate_coords:
-                z_cand = _find_lowest_z_at_xy(
-                    grid_occupied, truck_state, pkg_state,
-                    cx, cy, dx, dy, dz, h
-                )
-                if z_cand is not None:
-                    target_x, target_y, best_z = cx, cy, z_cand
-                    break
-
-        # masukkan ke truk jika ditemukan posisi valid
-        if best_z is not None:
-            pos = model.Position(x=target_x, y=target_y, z=best_z)
-            state.put_inside(pkg_id, truck_state, pos, o_i, skip_check=True)
-            _fill_box(grid_occupied, target_x, target_y, best_z, dx, dy, dz, True)
-            package_occupied[idx] = True
-
-    total_weight = sum(p.weight for p in truck_state.packages_inside.values())
-    total_value = sum(p.value for p in truck_state.packages_inside.values())
+    state.pack(truck_state, [pkg_id for _, pkg_id in genes], prefs, max_candidates)
 
     return DecodedState(
         truck_state=truck_state,
-        grid_occupied=grid_occupied,
-        package_occupied=package_occupied,
-        total_weight=total_weight,
-        total_value=total_value,
+        grid_occupied=truck_state.containers,
+        package_occupied=[p.id in truck_state.packages_inside for p in var.packages],
+        total_weight=sum(truck_state.weight),
+        total_value=truck_state.total_value,
     )
 
 
@@ -261,7 +162,8 @@ def decode_chromosome(chromosome: list[int], var: model.Variable) -> DecodedStat
 
 def roulette_wheel_selection(
     population: list[list[int]],
-    fitnesses: list[float]
+    fitnesses: list[float],
+    rng: random.Random = random,
 ) -> list[int]:
     """Seleksi menggunakan Roulette Wheel Selection."""
     min_fit = min(fitnesses)
@@ -273,10 +175,10 @@ def roulette_wheel_selection(
     total_fitness = sum(adjusted_fitnesses)
 
     if total_fitness == 0:
-        return random.choice(population)[:]
+        return rng.choice(population)[:]
 
     cumulative_prob = 0.0
-    roll = random.random()
+    roll = rng.random()
 
     for i, fit in enumerate(adjusted_fitnesses):
         prob = fit / total_fitness
@@ -287,13 +189,24 @@ def roulette_wheel_selection(
     return population[-1][:]
 
 
-def _order_crossover_seq(seq1: list[int], seq2: list[int]) -> list[int]:
+def tournament_selection(
+    population: list[list[int]],
+    fitnesses: list[float],
+    k: int = 3,
+    rng: random.Random = random,
+) -> list[int]:
+    """Seleksi turnamen: individu terbaik dari k individu acak."""
+    picked = rng.sample(range(len(population)), min(k, len(population)))
+    return population[max(picked, key=lambda i: fitnesses[i])][:]
+
+
+def _order_crossover_seq(seq1: list[int], seq2: list[int], rng: random.Random = random) -> list[int]:
     """Order Crossover (OX) khusus untuk gen sequence agar tetap unik 1..N tanpa duplikat."""
     size = len(seq1)
     if size <= 1:
         return seq1[:]
 
-    a, b = sorted(random.sample(range(size), 2))
+    a, b = sorted(rng.sample(range(size), 2))
     child_seq = [-1] * size
     child_seq[a:b + 1] = seq1[a:b + 1]
 
@@ -309,7 +222,7 @@ def _order_crossover_seq(seq1: list[int], seq2: list[int]) -> list[int]:
     return child_seq
 
 
-def crossover(parent1: list[int], parent2: list[int]) -> tuple[list[int], list[int]]:
+def crossover(parent1: list[int], parent2: list[int], rng: random.Random = random) -> tuple[list[int], list[int]]:
     """
     Mengawinkan 2 induk:
     - Gen (x, y, orient) ditukar dengan Uniform Crossover per paket.
@@ -320,7 +233,7 @@ def crossover(parent1: list[int], parent2: list[int]) -> tuple[list[int], list[i
     child2 = parent2[:]
 
     for i in range(n):
-        if random.random() < 0.5:
+        if rng.random() < 0.5:
             base = 4 * i
             child1[base:base + 3], child2[base:base + 3] = (
                 parent2[base:base + 3],
@@ -330,8 +243,8 @@ def crossover(parent1: list[int], parent2: list[int]) -> tuple[list[int], list[i
     seq1 = [parent1[4 * i + 3] for i in range(n)]
     seq2 = [parent2[4 * i + 3] for i in range(n)]
 
-    new_seq1 = _order_crossover_seq(seq1, seq2)
-    new_seq2 = _order_crossover_seq(seq2, seq1)
+    new_seq1 = _order_crossover_seq(seq1, seq2, rng)
+    new_seq2 = _order_crossover_seq(seq2, seq1, rng)
 
     for i in range(n):
         child1[4 * i + 3] = new_seq1[i]
@@ -340,76 +253,114 @@ def crossover(parent1: list[int], parent2: list[int]) -> tuple[list[int], list[i
     return child1, child2
 
 
-def mutate(chromosome: list[int], var: model.Variable, mutation_rate: float = 0.1):
-    """Mutasi dengan tetap menjaga batas koordinat agar tidak melewati dinding truk."""
+def mutate(chromosome: list[int], var: model.Variable, mutation_rate: float = 0.1,
+           rng: random.Random = random, shift: int = 0):
+    """
+    Mutasi dengan tetap menjaga batas koordinat agar tidak melewati dinding truk.
+
+    shift > 0: separuh mutasi pose hanya menggeser (x, y) maksimal sejauh shift.
+    """
     n = len(var.packages)
+    dim = _largest_dim(var)
     for i in range(n):
         base = 4 * i
         pkg = var.packages[i]
 
         # jika orientasi atau posisi (x, y) terkena mutasi, generate ulang dalam batas aman
-        if random.random() < mutation_rate:
-            x_new, y_new, o_new = _random_valid_gene(pkg, var.truck.dim)
-            chromosome[base] = x_new
-            chromosome[base + 1] = y_new
-            chromosome[base + 2] = o_new
+        if rng.random() < mutation_rate:
+            if shift > 0 and rng.random() < 0.5:
+                chromosome[base] = max(0, chromosome[base] + rng.randint(-shift, shift))
+                chromosome[base + 1] = max(0, chromosome[base + 1] + rng.randint(-shift, shift))
+            else:
+                x_new, y_new, o_new = _random_valid_gene(pkg, dim, rng)
+                chromosome[base] = x_new
+                chromosome[base + 1] = y_new
+                chromosome[base + 2] = o_new
 
         # swap mutation untuk sequence agar tidak pernah duplikat
-        if n > 1 and random.random() < mutation_rate:
-            j = random.randint(0, n - 1)
+        if n > 1 and rng.random() < mutation_rate:
+            j = rng.randint(0, n - 1)
             chromosome[base + 3], chromosome[4 * j + 3] = (
                 chromosome[4 * j + 3],
                 chromosome[base + 3],
             )
 
 
-def evaluate_fitness(decoded: DecodedState) -> float:
+def evaluate_fitness(decoded: DecodedState, params=None) -> float:
     """
-    Karena state dijamin 100% valid dan bebas clipping,
-    kita bisa langsung menggunakan variant_1_hard dari obj_func.py
+    Objective function sesuai params (default variant_3). Hasil decode selalu valid, jadi
+    yang membedakan individu hanya nilai dan penalti urutan bongkar (ETA).
     """
-    return obj_func.variant_1_hard(decoded.truck_state)
+    return obj_func.evaluate(decoded.truck_state, params)
 
 
 def run_ga(
     var: model.Variable,
-    pop_size: int = 50,
-    generations: int = 100,
-    crossover_rate: float = 0.8,
-    mutation_rate: float = 0.1,
+    pop_size: int | None = None,
+    generations: int | None = None,
+    crossover_rate: float | None = None,
+    mutation_rate: float | None = None,
+    *,
+    params: RunParams | None = None,
+    rng: random.Random | None = None,
+    on_generation: Callable[[int, float, list[float]], None] | None = None,
 ) -> tuple[list[int], DecodedState, float, int, int]:
     """
     Menjalankan siklus Genetic Algorithm anti-clipping.
+    Argumen eksplisit menang atas params.ga, lalu default GAParams; mutation_rate None = 1/N.
+    rng default: random.Random(params.seed) jika ada seed, jika tidak modul random.
+    on_generation(generasi, fitness terbaik sejauh ini, fitness populasi) dipanggil tiap generasi.
     Mengembalikan (kromosom_terbaik, decoded_state_terbaik, fitness_terbaik, total_weight, total_value).
     """
-    population = init_population(var, pop_size)
+    ga = params.ga if params is not None else GAParams()
+    objective = params.objective if params is not None else None
+    pop_size = ga.pop_size if pop_size is None else pop_size
+    generations = ga.generations if generations is None else generations
+    crossover_rate = ga.crossover_rate if crossover_rate is None else crossover_rate
+    if mutation_rate is None:
+        mutation_rate = ga.mutation_rate if ga.mutation_rate is not None else 1 / max(1, len(var.packages))
+    if rng is None:
+        rng = random.Random(params.seed) if params is not None and params.seed is not None else random
+
+    def select(population, fitnesses):
+        if ga.selection == "tournament":
+            return tournament_selection(population, fitnesses, ga.tournament_k, rng)
+        return roulette_wheel_selection(population, fitnesses, rng)
+
+    min_support = objective.min_support if objective is not None else 0.5
+    template = state.empty_state(var, min_support)
+    population = init_population(var, pop_size, rng, ga.eta_seed_frac)
     best_chromosome: list[int] = []
     best_decoded: DecodedState | None = None
     best_fitness = float("-inf")
 
     for gen in range(generations):
-        decoded_pop = [decode_chromosome(ind, var) for ind in population]
-        fitnesses = [evaluate_fitness(dec) for dec in decoded_pop]
+        decoded_pop = [decode_chromosome(ind, var, template, ga.max_candidates) for ind in population]
+        fitnesses = [evaluate_fitness(dec, objective) for dec in decoded_pop]
 
         gen_best_idx = max(range(pop_size), key=lambda idx: fitnesses[idx])
         if fitnesses[gen_best_idx] > best_fitness:
             best_fitness = fitnesses[gen_best_idx]
             best_chromosome = population[gen_best_idx][:]
             best_decoded = decoded_pop[gen_best_idx]
+        if on_generation is not None:
+            on_generation(gen, best_fitness, fitnesses)
 
+        ranked = sorted(range(pop_size), key=lambda idx: fitnesses[idx], reverse=True)
         next_population: list[list[int]] = [best_chromosome[:]]
+        next_population += [population[idx][:] for idx in ranked[:max(0, ga.elitism - 1)]]
 
         while len(next_population) < pop_size:
-            p1 = roulette_wheel_selection(population, fitnesses)
-            p2 = roulette_wheel_selection(population, fitnesses)
+            p1 = select(population, fitnesses)
+            p2 = select(population, fitnesses)
 
-            if random.random() < crossover_rate:
-                c1, c2 = crossover(p1, p2)
+            if rng.random() < crossover_rate:
+                c1, c2 = crossover(p1, p2, rng)
             else:
                 c1, c2 = p1[:], p2[:]
 
-            mutate(c1, var, mutation_rate)
-            mutate(c2, var, mutation_rate)
+            mutate(c1, var, mutation_rate, rng, ga.shift_mutation)
+            mutate(c2, var, mutation_rate, rng, ga.shift_mutation)
 
             next_population.append(c1)
             if len(next_population) < pop_size:
@@ -418,7 +369,6 @@ def run_ga(
         population = next_population
 
     assert best_decoded is not None
-    best_decoded.truck_state.truck.objective_value = best_fitness
     return (
         best_chromosome,
         best_decoded,
