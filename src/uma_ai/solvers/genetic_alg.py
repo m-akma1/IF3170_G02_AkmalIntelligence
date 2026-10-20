@@ -1,12 +1,3 @@
-"""
-Genetic Algorithm dengan kromosom 4N: (x, y, orient, sequence) per paket, urutan paket sama dengan input.
-
-Decoder menempatkan paket berurutan sesuai sequence lewat `state.pack`: (x, y, orient) dipakai
-sebagai preferensi dengan gravitasi, lalu extreme point terdekat, lalu truk berikutnya.
-Hasil decode selalu valid (tidak overlap, tertumpu, fragile dan berat terpenuhi).
-
-Semua operator menerima `rng` (default modul random, jadi random.seed tetap berlaku).
-"""
 import random
 from collections.abc import Callable
 from dataclasses import dataclass

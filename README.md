@@ -11,7 +11,7 @@ Objektif utama program pada tugas ini bertujuan untuk membuat konfigurasi pengis
 ### Persyaratan Sistem
 
 Pastikan program berikut sudah terpasang di sistem Anda:
-* Python 3.9 atau lebih tinggi
+* Python 3.10 atau lebih tinggi
 * Pip 23.0 atau lebih tinggi
 
 ### Cara Menjalankan
@@ -25,27 +25,40 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-2. *Install* dependensi dan jalankan *server*. Pastikan versi Python dan Pip terpenuhi.
+2. *Install* dependensi. Pastikan versi Python dan Pip terpenuhi.
 ```sh
 python -m pip install -e ".[project]"
-python -m akmal_intelligence.main
 ```
 
-3. Program sudah berjalan di [`http://localhost:8080`](http://localhost:8080). Kunjungi situs melalui browser untuk menggunakan program.
+3. Jalankan program dengan perintah berikut:
+
+```sh
+python -m uma_ai.main <file-test-case> --param <file-param> [--no-server]
+```
+
+Keterangan argumen:
+* `<file-test-case>`: Nama *test case* di [`data/input`](./data/input) atau *path* file JSON
+* `<file-param>`: Nama file parameter di [`data/param`](./data/param) atau *path* file JSON, dengan default [`data/param/default.json`](./data/param/default.json)
+* `--no-server`: Menjalankan tanpa visualisasi (opsional)
+
+3. Program sudah berjalan dan output dapat dilihat langsung di folder [`output`](./output). Jika server dijalankan, dapat dibuka di [`http://localhost:8080`](http://localhost:8080). Kunjungi situs melalui browser untuk menggunakan program.
 
 ## Pembagian Kerja
 
 ### 13524084 | Dzaki Ahmad Al Hussainy 
 
-* Bagian 1
+* Implementasi Genetic Algorithm
+* Pembuatan Visualisasi dengan `viser`
 
 ### 13524096 | Moreno Syawali Ganda Sugita
 
-* Bagian 2
+* Implementasi Simulated Annealing
+* Penulisan Laporan dengan $\LaTeX{}$
 
 ### 13524099 | Muhammad Akmal
 
-* Bagian 3
+* Implementasi Core
+* Implementasi Hill Climbing
 
 ## Kredit
 
