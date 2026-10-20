@@ -6,14 +6,10 @@ def extents(package: model.PackageState) -> tuple[int, int, int]:
 
     Contoh: Dimension(w=1, l=2, h=3) dengan Orientation(w=y, l=z, h=x)
     menghasilkan (3, 1, 2).
+
+    Hanya mengembalikan cache `package.extents` yang dihitung sekali di PackageState.
     """
-    orient = model.ORIENTATION[package.orientation_id]
-    size = {
-        orient["w"]: package.width,
-        orient["l"]: package.length,
-        orient["h"]: package.height,
-    }
-    return size["x"], size["y"], size["z"]
+    return package.extents[package.orientation_id]
 
 def bounds(package: model.PackageState) -> tuple[int, int, int, int, int, int]:
     """(x_min, y_min, z_min, x_max, y_max, z_max) dari paket."""

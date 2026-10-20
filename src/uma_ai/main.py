@@ -1,14 +1,20 @@
+import sys
 import time
+from pathlib import Path
+
 import viser
-from core import model
-import uma_ai.solvers.GA as ga
+
+from uma_ai.core import model
+from uma_ai.solvers import GA as ga
+
+DEFAULT_INPUT = Path(__file__).resolve().parents[2] / "data" / "input" / "01_uma.json"
 
 
 def main():
     server = viser.ViserServer()
-    
-    
-    var = model.readJSON("../../data/input/01_uma.json")
+
+    input_path = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_INPUT
+    var = model.readJSON(input_path)
     print(f"Total paket yabg ada: {len(var.packages)}")
     
     best_chrom, best_decoded, best_score, total_weight, total_value = ga.run_ga(
@@ -16,17 +22,17 @@ def main():
         pop_size=50,
         generations=100,
         crossover_rate=0.8,
-        mutation_rate=0.1,
     )
     print("Kromosom Terbaik:", best_chrom)
     print("Status Paket (Boolean Occupied):", best_decoded.package_occupied)
     print("Jumlah Clipping:", best_decoded.clip_count)
     print("Fitness Terbaik:", best_score)
-    print(f"Total Weight : {total_weight} / {best_decoded.truck_state.truck.max_capacity}")
+    print(f"Total Weight : {best_decoded.truck_state.weight} / {[t.max_capacity for t in best_decoded.truck_state.trucks]}")
     print(f"Total Value : {total_value}")
 
-    final_var = model.state_to_variable(best_decoded.truck_state)
-    model.writeJSON("output_result.json", final_var)
+    output_path = sys.argv[2] if len(sys.argv) > 2 else "output_result.json"
+    final_var = model.state_to_variable(best_decoded.truck_state, objective_value=best_score)
+    model.writeJSON(output_path, final_var)
     
     
     
