@@ -30,7 +30,7 @@ def _resolve(name: str, folder: Path) -> Path:
 
 
 def _parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Jalan.")
+    parser = argparse.ArgumentParser(description="Menjalankan satu algoritma local search pada satu test case.")
     parser.add_argument("input", nargs="?", help="test case di data/input (mis. 02_tc02) atau path file JSON")
     parser.add_argument("-g", "--generate", metavar="CONFIG",
                         help="buat test case dari data/generator/CONFIG.json ke data/input, lalu jalankan")
@@ -192,7 +192,7 @@ def main():
     param_path = _resolve(args.param, PARAM_DIR)
     run_params = params.load_params(param_path)
 
-    server = viser.ViserServer()
+    server = None if args.no_server else viser.ViserServer()
 
     var = model.readJSON(input_path)
     print(f"Input: {input_path.name} ({len(var.packages)} paket, {len(var.trucks)} truk)")
