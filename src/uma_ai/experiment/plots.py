@@ -8,14 +8,14 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 SERIES = [
-    "#3c0005",  # maroon
-    "#8f0f0d",
-    "#c81e14",  # red
-    "#f27532",
-    "#ffdc50",  # yellow
-    "#ffb020",
-    "#ff9600",  # orange
-    "#190500",  # near-black
+    "#a3171c",  # deep red
+    "#d9a400",  # gold
+    "#e86a48",  # coral
+    "#7f4500",  # brown
+    "#c8325a",  # crimson
+    "#e8832a",  # orange
+    "#8c2a2a",  # maroon
+    "#b86a00",  # amber
 ]
 TEXT, MUTED, GRID, SURFACE = "#0b0b0b", "#52514e", "#e4e3df", "#fcfcfb"
 

@@ -33,14 +33,14 @@ python -m pip install -e ".[project]"
 3. Jalankan program dengan perintah berikut:
 
 ```sh
-python -m uma_ai.main <file-test-case> --param <file-param> [--algo ga|hc] [--no-server]
-python -m uma_ai.main --generate <file-generator> [--param <file-param>] [--algo ga|hc] [--no-server]
+python -m uma_ai.main <file-test-case> --param <file-param> [--algo ga|hc|sa] [--no-server]
+python -m uma_ai.main --generate <file-generator> [--param <file-param>] [--algo ga|hc|sa] [--no-server]
 ```
 
 Keterangan argumen:
 * `<file-test-case>`: Nama *test case* di [`data/input`](./data/input) atau *path* file JSON
 * `<file-param>`: Nama file parameter di [`data/param`](./data/param) atau *path* file JSON, dengan default [`data/param/default.json`](./data/param/default.json)
-* `--algo`: Algoritma yang dijalankan (`ga`, `hc`, `sa`), default `ga`. Varian *Hill Climbing* (`steepest`, `stochastic`, `sideways`, `random_restart`) diatur di `hc.variant` pada file parameter
+* `--algo`: Algoritma yang dijalankan (`ga`, `hc`, `sa`), default `ga`. Varian *Hill Climbing* (`steepest`, `stochastic`, `sideways`, `random_restart`) diatur di `hc.variant` pada file parameter. Suhu *Simulated Annealing* (`sa.t_start`, `sa.t_end`) secara *default* dikali `v_max` (nilai paket terbesar yang muat), sehingga sebanding dengan penalti *objective function*; `sa.t_scale: "absolute"` memakai nilai apa adanya. [`data/param/sa_unscaled.json`](./data/param/sa_unscaled.json) berisi pengaturan SA awal (variant 6, suhu absolut, `alpha` 0.999)
 * `--generate`: Membuat *test case* acak dari konfigurasi di [`data/generator`](./data/generator) ke `data/input`, lalu langsung menjalankannya
 * `--no-server`: Menjalankan tanpa visualisasi (opsional)
 
@@ -60,7 +60,7 @@ Pilihan variable `<suite>` untuk *suite* eksperimen:
 * `compare`: semua algoritma dengan ukuran sedang, untuk dijalankan pada *test case* hasil *generator* (`--input`)
 * `--jobs N`: menjalankan *run* secara paralel. Durasi menjadi kurang akurat, jadi gunakan 1 (*default*) untuk hasil laporan
 
-*Run* ke-*k* memakai *seed* `seed + k - 1`. Semua varian HC (dan SA) pada *run* yang sama mulai dari *state* awal yang sama. Hasil disimpan di `output/experiment/<suite>/` (atau `<suite>_<input>/` jika `--input` dipakai):
+*Run* ke-*k* memakai *seed* `seed + k - 1`. Semua varian HC (dan SA) pada *run* yang sama mulai dari *state* awal yang sama. Hasil disimpan di `output/experiments/<suite>/` (atau `<suite>_<input>/` jika `--input` dipakai):
 
 * `<eksperiment_name>/run_<k>/initial.json`: nilai state awal (format sama dengan input)
 * `<eksperiment_name>/run_<k>/final.json`: nilai state akhir

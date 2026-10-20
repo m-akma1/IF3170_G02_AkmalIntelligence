@@ -16,7 +16,7 @@ class ObjectiveParams(_Params):
     kecuali berat: c_weight x vw_max (rasio nilai/berat terbesar) per unit kelebihan berat.
     Dengan c = 1, satu pelanggaran selalu lebih mahal dari paket mana pun.
     """
-    variant: Literal[1, 2, 3, 4, 5] = 3
+    variant: Literal[1, 2, 3, 4, 5, 6] = 3
     c_floating: float = 1.0
     c_fragile: float = 1.0
     c_weight: float = 1.0
@@ -29,7 +29,7 @@ class ObjectiveParams(_Params):
 
 class InitParams(_Params):
     """Argumen `state.random_state`."""
-    mode: Literal["drop", "ep"] = "drop"
+    mode: Literal["drop", "density", "ep"] = "drop"
     tries: int = 5
     p_in: float = 1.0
     weight_ratio: float | None = 1.0
@@ -76,9 +76,11 @@ class HCParams(_Params):
 
 
 class SAParams(_Params):
-    t_start: float = 0.5
-    t_end: float = 0.005
+    t_start: float = 0.05
+    t_end: float = 0.0005
+    t_scale: Literal["absolute", "v_max"] = "v_max"     # v_max: suhu = t x v_max (skala yang sama dengan penalti)
     cooling: Literal["geometric", "linear"] = "geometric"
+    alpha: float | None = None                          # geometric: None = (t_end / t_start)^(1 / iterations)
     iterations: int = 100_000
 
 

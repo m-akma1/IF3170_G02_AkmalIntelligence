@@ -52,8 +52,21 @@ def variant_5(_state: model.TruckState, params: ObjectiveParams | None = None) -
     volume = sum(t.dim.width * t.dim.length * t.dim.height for t in _state.trucks)
     return variant_4(_state, p) - p.c_compact * _state.v_max * _state.compactness / volume
 
+def variant_6_unscaled(_state: model.TruckState, params: ObjectiveParams | None = None) -> float:
+    """
+    Variant sederhana (unscaled penalty):
+    Mengurangi total value murni dengan jumlah pelanggaran langsung tanpa pengali v_max.
+    """
+    p = params or _DEFAULT
+    return (
+        _state.total_value
+        - p.c_floating * _state.n_floating
+        - p.c_fragile * _state.n_fragile_pairs
+        - p.c_weight * constraints.overweight_amount(_state)
+        - p.c_eta * _state.n_eta_pairs
+    )
 
-VARIANTS = {1: variant_1_hard, 2: variant_2, 3: variant_3, 4: variant_4, 5: variant_5}
+VARIANTS = {1: variant_1_hard, 2: variant_2, 3: variant_3, 4: variant_4, 5: variant_5, 6: variant_6_unscaled}
 
 
 def evaluate(_state: model.TruckState, params: ObjectiveParams | None = None) -> float:

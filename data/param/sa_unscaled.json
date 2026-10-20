@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "objective": {
+    "variant": 6
+  },
+  "sa": {
+    "t_start": 0.5,
+    "t_end": 0.005,
+    "t_scale": "absolute",
+    "cooling": "geometric",
+    "alpha": 0.999,
+    "iterations": 10000
+  }
+}

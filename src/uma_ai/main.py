@@ -3,9 +3,7 @@ import random
 import time
 from pathlib import Path
 
-import viser
-
-from uma_ai.core import model, obj_func, params
+from uma_ai.core import constraints, model, obj_func, params
 from uma_ai.experiment import generator
 from uma_ai.solvers import LOCAL_SEARCH, SOLVERS
 from uma_ai.solvers.result import initial_state, run_timed
@@ -54,7 +52,7 @@ def main():
     param_path = _resolve(args.param, PARAM_DIR)
     run_params = params.load_params(param_path)
 
-    server = None if args.no_server else viser.ViserServer()
+    server = viser.ViserServer()
 
     var = model.readJSON(input_path)
     print(f"Input: {input_path.name} ({len(var.packages)} paket, {len(var.trucks)} truk)")
@@ -70,6 +68,8 @@ def main():
     print(f"Durasi    : {result.duration:.2f} s")
     print(f"Statistik : {result.stats}")
     print(f"Feasible  : {obj_func.is_feasible(final)}")
+    print(f"Pelanggaran : overweight {constraints.overweight_amount(final)}, floating {final.n_floating}, "
+          f"fragile {final.n_fragile_pairs}, ETA {final.n_eta_pairs}")
     print(f"Paket     : {len(final.packages_inside)} / {len(final.ids)} di dalam truk")
     print(f"Total Weight : {final.weight} / {[t.max_capacity for t in final.trucks]}")
     print(f"Total Value  : {final.total_value}")

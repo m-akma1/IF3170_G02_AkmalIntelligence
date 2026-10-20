@@ -97,8 +97,9 @@ def _run_single(initial: model.TruckState, rng: random.Random, params: RunParams
     stats = {"iterations": iterations, "evaluations": evaluations, "stop_reason": reason}
     if mode == "sideways":
         stats |= {"sideways_moves": total_sideways, "max_sideways": params.hc.max_sideways}
+
     return SearchResult(
-        algorithm=f"hc-{mode}",
+        algorithm=f" Hill Climbing - {mode}",
         initial=initial,
         final=truck,
         initial_value=f0,

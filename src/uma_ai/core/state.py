@@ -428,6 +428,8 @@ def random_state(
     mode="drop": paket diambil dengan urutan acak (peluang p_in), lalu dicoba hingga `tries` kali
     pada truk, orientasi, dan (x, y) acak dengan gravitasi; berhenti mengisi truk jika berat
     melebihi weight_ratio x kapasitas (None = tanpa batas). Tidak pernah overlap atau melayang.
+    mode="density": seperti "drop", tetapi paket diambil berurutan dari nilai per volume
+    terbesar (urutan generator SA awal); pose tetap acak.
     mode="ep": urutan dan orientasi acak, ditempatkan dengan `pack` (jauh lebih padat).
     """
     rng = rng or random.Random()
@@ -440,7 +442,12 @@ def random_state(
             p = truck.packages_outside[package_id]
             p.orientation_id = rng.choice(p.unique_orients)
         return pack(truck, order)
-    if mode != "drop":
+    if mode == "density":
+        def density(package_id: str) -> float:
+            p = truck.packages_outside[package_id]
+            return p.value / (p.width * p.length * p.height)
+        order.sort(key=density, reverse=True)
+    elif mode != "drop":
         raise ValueError(f"Unknown random_state mode '{mode}'")
 
     for package_id in order:

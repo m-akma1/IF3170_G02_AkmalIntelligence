@@ -54,9 +54,11 @@
     "restart_base": "steepest"
   },
   "sa": {
-    "t_start": 0.5,
-    "t_end": 0.005,
+    "t_start": 0.05,
+    "t_end": 0.0005,
+    "t_scale": "v_max",
     "cooling": "geometric",
+    "alpha": null,
     "iterations": 100000
   }
 }

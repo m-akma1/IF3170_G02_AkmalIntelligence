@@ -390,7 +390,7 @@ def run(var: model.Variable, params: RunParams, rng: random.Random,
     _, best_decoded, best_fitness, _, _ = run_ga(var, params=params, rng=rng, on_generation=on_generation)
     initial_decoded = first[0]
     return SearchResult(
-        algorithm="ga",
+        algorithm="Genetic Algorithm",
         initial=initial_decoded.truck_state,
         final=best_decoded.truck_state,
         initial_value=evaluate_fitness(initial_decoded, params.objective),
