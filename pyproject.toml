@@ -16,7 +16,8 @@ authors = [
 keywords = ["ai", "local-search", "knapsack"]
 
 dependencies = [
-  "viser"
+  "pydantic>=2.13.5",
+  "viser",
 ]
 
 [project.optional-dependencies]
