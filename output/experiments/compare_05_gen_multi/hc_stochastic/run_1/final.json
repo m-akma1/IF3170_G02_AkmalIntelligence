@@ -1,0 +1,7224 @@
+{
+  "trucks": [
+    {
+      "dimension": {
+        "w": 12,
+        "l": 20,
+        "h": 10
+      },
+      "max_capacity": 3000,
+      "objective_value": 11540.74
+    },
+    {
+      "dimension": {
+        "w": 10,
+        "l": 16,
+        "h": 10
+      },
+      "max_capacity": 2000,
+      "objective_value": 11540.74
+    }
+  ],
+  "packages": [
+    {
+      "id": "tiny_082",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 18,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_095",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 140,
+      "weight": 37,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 10,
+        "z": 7
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_086",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 61,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 9,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_036",
+      "dimension": {
+        "w": 5,
+        "l": 3,
+        "h": 5
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 142,
+      "weight": 63,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_075",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 55,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 6
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_069",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 25,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 4,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_018",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 70,
+      "weight": 24,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_003",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 38,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 1,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_062",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 222,
+      "weight": 116,
+      "is_fragile": true,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_036",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 23,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 3,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_050",
+      "dimension": {
+        "w": 5,
+        "l": 4,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 203,
+      "weight": 150,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_032",
+      "dimension": {
+        "w": 6,
+        "l": 5,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 215,
+      "weight": 99,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_029",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 29,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_008",
+      "dimension": {
+        "w": 2,
+        "l": 15,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 153,
+      "weight": 29,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_084",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 173,
+      "weight": 50,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 4
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_003",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 111,
+      "weight": 44,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_078",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 145,
+      "weight": 37,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 3,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_068",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 37,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 17,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_038",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 55,
+      "weight": 18,
+      "is_fragile": true,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_024",
+      "dimension": {
+        "w": 2,
+        "l": 10,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 63,
+      "weight": 14,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 0,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_058",
+      "dimension": {
+        "w": 5,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 87,
+      "weight": 49,
+      "is_fragile": true,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_026",
+      "dimension": {
+        "w": 6,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 213,
+      "weight": 74,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_087",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 23,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 11,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_088",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 25,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 2,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_098",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 121,
+      "weight": 35,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 0,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_010",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 45,
+      "weight": 20,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_054",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 96,
+      "weight": 32,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 14,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_073",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 81,
+      "weight": 30,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 9,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_100",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 132,
+      "weight": 79,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_027",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 144,
+      "weight": 46,
+      "is_fragile": true,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_065",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 131,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 7,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "long_020",
+      "dimension": {
+        "w": 1,
+        "l": 15,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 52,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_078",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 34,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_104",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 30,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_068",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 79,
+      "weight": 24,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_027",
+      "dimension": {
+        "w": 2,
+        "l": 12,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 143,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 17,
+        "z": 9
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_025",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 100,
+      "weight": 53,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_005",
+      "dimension": {
+        "w": 1,
+        "l": 14,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 123,
+      "weight": 21,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_040",
+      "dimension": {
+        "w": 3,
+        "l": 6,
+        "h": 5
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 194,
+      "weight": 133,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_038",
+      "dimension": {
+        "w": 5,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 95,
+      "weight": 62,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_036",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 227,
+      "weight": 73,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_070",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 65,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 14,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_055",
+      "dimension": {
+        "w": 4,
+        "l": 6,
+        "h": 5
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 195,
+      "weight": 176,
+      "is_fragile": true,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_008",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 57,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 7,
+        "z": 7
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_011",
+      "dimension": {
+        "w": 4,
+        "l": 5,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 129,
+      "weight": 70,
+      "is_fragile": true,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_044",
+      "dimension": {
+        "w": 4,
+        "l": 5,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 178,
+      "weight": 125,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_085",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 82,
+      "weight": 26,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 9,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_049",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 40,
+      "weight": 9,
+      "is_fragile": true,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 2,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_043",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 61,
+      "weight": 43,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 2,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_042",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 97,
+      "weight": 42,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_018",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 65,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 18,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_008",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 5
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 97,
+      "weight": 64,
+      "is_fragile": true,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_040",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 121,
+      "weight": 44,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 16,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_016",
+      "dimension": {
+        "w": 2,
+        "l": 16,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 184,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 7
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_057",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 54,
+      "weight": 23,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 4,
+        "z": 4
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "long_007",
+      "dimension": {
+        "w": 2,
+        "l": 16,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 297,
+      "weight": 56,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_066",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 81,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 6,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_019",
+      "dimension": {
+        "w": 3,
+        "l": 5,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 130,
+      "weight": 88,
+      "is_fragile": true,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_008",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 235,
+      "weight": 68,
+      "is_fragile": true,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_103",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 167,
+      "weight": 56,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_091",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 39,
+      "weight": 21,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 17,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_105",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 114,
+      "weight": 45,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 14,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_022",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 70,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 17,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_054",
+      "dimension": {
+        "w": 5,
+        "l": 5,
+        "h": 5
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 207,
+      "weight": 188,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_023",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 100,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 11,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_011",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 11,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 15,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_033",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 203,
+      "weight": 62,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_002",
+      "dimension": {
+        "w": 6,
+        "l": 3,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 215,
+      "weight": 108,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_089",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 121,
+      "weight": 54,
+      "is_fragile": true,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_017",
+      "dimension": {
+        "w": 1,
+        "l": 14,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 116,
+      "weight": 27,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_003",
+      "dimension": {
+        "w": 3,
+        "l": 6,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 136,
+      "weight": 72,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_060",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 120,
+      "weight": 30,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 1,
+        "z": 5
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_052",
+      "dimension": {
+        "w": 6,
+        "l": 6,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 350,
+      "weight": 204,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 0,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_051",
+      "dimension": {
+        "w": 5,
+        "l": 6,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 233,
+      "weight": 77,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_041",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 11,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 1,
+        "z": 4
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_037",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 127,
+      "weight": 40,
+      "is_fragile": true,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_092",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 140,
+      "weight": 32,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_053",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 79,
+      "weight": 16,
+      "is_fragile": true,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_053",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 5
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 116,
+      "weight": 63,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_050",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 37,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_010",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 60,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 0,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "long_009",
+      "dimension": {
+        "w": 2,
+        "l": 12,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 123,
+      "weight": 23,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_082",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 196,
+      "weight": 51,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_052",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 29,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_084",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 85,
+      "weight": 23,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 17,
+        "z": 7
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_089",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 18,
+      "weight": 6,
+      "is_fragile": true,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_024",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 47,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 12,
+        "z": 4
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_009",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 39,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 7,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_071",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 37,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 12,
+        "z": 1
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_010",
+      "dimension": {
+        "w": 1,
+        "l": 12,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 131,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_032",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 40,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 15,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_007",
+      "dimension": {
+        "w": 6,
+        "l": 3,
+        "h": 5
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 188,
+      "weight": 99,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_080",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 155,
+      "weight": 49,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_076",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 165,
+      "weight": 80,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 16,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_006",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 28,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_014",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 77,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 6,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_004",
+      "dimension": {
+        "w": 2,
+        "l": 10,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 88,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 10,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_034",
+      "dimension": {
+        "w": 5,
+        "l": 6,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 195,
+      "weight": 99,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_027",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 111,
+      "weight": 54,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_050",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 36,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_038",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 147,
+      "weight": 63,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_017",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 89,
+      "weight": 29,
+      "is_fragile": true,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 14,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_042",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 27,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 16,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_013",
+      "dimension": {
+        "w": 2,
+        "l": 10,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 123,
+      "weight": 40,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_002",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 50,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 5,
+        "z": 5
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "long_002",
+      "dimension": {
+        "w": 2,
+        "l": 14,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 225,
+      "weight": 36,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_020",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 63,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 6,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_057",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 177,
+      "weight": 74,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_031",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 106,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 2,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_096",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 81,
+      "weight": 43,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_083",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 65,
+      "weight": 43,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_021",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 118,
+      "weight": 25,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 8,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_054",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 25,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_017",
+      "dimension": {
+        "w": 6,
+        "l": 5,
+        "h": 6
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 519,
+      "weight": 254,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_020",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 91,
+      "weight": 38,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 12,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_007",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 40,
+      "weight": 14,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 4,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_048",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 9,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 11,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_020",
+      "dimension": {
+        "w": 5,
+        "l": 6,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 185,
+      "weight": 146,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 4,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_080",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 51,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 6,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_015",
+      "dimension": {
+        "w": 2,
+        "l": 16,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 176,
+      "weight": 23,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_006",
+      "dimension": {
+        "w": 2,
+        "l": 13,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 123,
+      "weight": 21,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_045",
+      "dimension": {
+        "w": 3,
+        "l": 6,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 167,
+      "weight": 79,
+      "is_fragile": true,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_001",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 51,
+      "weight": 28,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 7,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_022",
+      "dimension": {
+        "w": 5,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 102,
+      "weight": 50,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_001",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 82,
+      "weight": 54,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_101",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 19,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_044",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 57,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 6,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_029",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 47,
+      "weight": 23,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 15,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_035",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 140,
+      "weight": 50,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 7,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_055",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 215,
+      "weight": 59,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 12,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_060",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 51,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 15,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_085",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 74,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 13,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_057",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 15,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 0,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_031",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 37,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 10,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_063",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 75,
+      "weight": 49,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_105",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 74,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 1,
+        "z": 6
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "long_022",
+      "dimension": {
+        "w": 1,
+        "l": 13,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 68,
+      "weight": 12,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_023",
+      "dimension": {
+        "w": 1,
+        "l": 11,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 117,
+      "weight": 21,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 8,
+        "z": 1
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_065",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 235,
+      "weight": 60,
+      "is_fragile": true,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_048",
+      "dimension": {
+        "w": 6,
+        "l": 6,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 166,
+      "weight": 135,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_042",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 47,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 12,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_046",
+      "dimension": {
+        "w": 6,
+        "l": 4,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 348,
+      "weight": 178,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_058",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 74,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 16,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_058",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 139,
+      "weight": 41,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 1,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_081",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 36,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 1,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_040",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 22,
+      "weight": 6,
+      "is_fragile": true,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 7,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_005",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 65,
+      "weight": 25,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 9,
+        "z": 1
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_095",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 63,
+      "weight": 14,
+      "is_fragile": true,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 15,
+        "z": 1
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_019",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 35,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 10,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_029",
+      "dimension": {
+        "w": 1,
+        "l": 14,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 60,
+      "weight": 12,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_060",
+      "dimension": {
+        "w": 5,
+        "l": 6,
+        "h": 5
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 444,
+      "weight": 209,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_066",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 20,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 8,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_049",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 154,
+      "weight": 44,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_044",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 185,
+      "weight": 111,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 12,
+        "z": 4
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_019",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 82,
+      "weight": 31,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_047",
+      "dimension": {
+        "w": 4,
+        "l": 5,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 150,
+      "weight": 108,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_037",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 138,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 3,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_043",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 256,
+      "weight": 133,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_041",
+      "dimension": {
+        "w": 5,
+        "l": 6,
+        "h": 6
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 507,
+      "weight": 151,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_029",
+      "dimension": {
+        "w": 5,
+        "l": 5,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 266,
+      "weight": 163,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_028",
+      "dimension": {
+        "w": 2,
+        "l": 8,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 122,
+      "weight": 20,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 11,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_091",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 63,
+      "weight": 11,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 3,
+        "z": 6
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_104",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 46,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 1,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_001",
+      "dimension": {
+        "w": 2,
+        "l": 10,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 80,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_027",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 80,
+      "weight": 20,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 17,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_003",
+      "dimension": {
+        "w": 2,
+        "l": 13,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 193,
+      "weight": 31,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_086",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 69,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 7,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_064",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 36,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 6,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_103",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 57,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 10,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_025",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 19,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 0,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_099",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 162,
+      "weight": 48,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 0,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_041",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 103,
+      "weight": 29,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_079",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 18,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 18,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_098",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 76,
+      "weight": 24,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_073",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 136,
+      "weight": 53,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_059",
+      "dimension": {
+        "w": 5,
+        "l": 4,
+        "h": 5
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 220,
+      "weight": 123,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_045",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 34,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 7,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_094",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 13,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_064",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 103,
+      "weight": 33,
+      "is_fragile": true,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_015",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 20,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 14,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_100",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 79,
+      "weight": 23,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_087",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 72,
+      "weight": 49,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_030",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 72,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 13,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_051",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 34,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 13,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_072",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 65,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 18,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_012",
+      "dimension": {
+        "w": 3,
+        "l": 6,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 215,
+      "weight": 60,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_028",
+      "dimension": {
+        "w": 3,
+        "l": 5,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 236,
+      "weight": 109,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_012",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 62,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 14,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_059",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 16,
+      "weight": 5,
+      "is_fragile": true,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_011",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 279,
+      "weight": 57,
+      "is_fragile": true,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_021",
+      "dimension": {
+        "w": 2,
+        "l": 11,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 258,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 4,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_063",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 38,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 15,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_031",
+      "dimension": {
+        "w": 5,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 158,
+      "weight": 84,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_037",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 80,
+      "weight": 41,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_010",
+      "dimension": {
+        "w": 6,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 109,
+      "weight": 47,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 1,
+        "z": 5
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_022",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 90,
+      "weight": 23,
+      "is_fragile": true,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_074",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 100,
+      "weight": 50,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_012",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 108,
+      "weight": 44,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_014",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 64,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 9,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_071",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 127,
+      "weight": 50,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_034",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 87,
+      "weight": 27,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_013",
+      "dimension": {
+        "w": 5,
+        "l": 4,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 190,
+      "weight": 170,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_046",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 72,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 0,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_039",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 122,
+      "weight": 30,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 14,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_076",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 29,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 14,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_021",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 44,
+      "weight": 11,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 5,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_026",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 34,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_005",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 141,
+      "weight": 39,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_053",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 159,
+      "weight": 58,
+      "is_fragile": true,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_067",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 20,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 0,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_004",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 105,
+      "weight": 31,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_004",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 71,
+      "weight": 61,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 18,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_074",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 41,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 1,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_047",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 65,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 10,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_083",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 33,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 6,
+        "z": 7
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_028",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 32,
+      "weight": 14,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_034",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 50,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 2,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_039",
+      "dimension": {
+        "w": 6,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 156,
+      "weight": 68,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_006",
+      "dimension": {
+        "w": 6,
+        "l": 6,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 287,
+      "weight": 88,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_009",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 78,
+      "weight": 27,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_011",
+      "dimension": {
+        "w": 2,
+        "l": 16,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 100,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_059",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 198,
+      "weight": 59,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 0,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_062",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 35,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 14,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_093",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 75,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_035",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 38,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 14,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_039",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 32,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_013",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 58,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 2,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_079",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 129,
+      "weight": 36,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_019",
+      "dimension": {
+        "w": 2,
+        "l": 10,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 187,
+      "weight": 24,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_077",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 64,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_070",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 62,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_014",
+      "dimension": {
+        "w": 4,
+        "l": 6,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 196,
+      "weight": 112,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_096",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 55,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 9,
+        "z": 9
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_033",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 131,
+      "weight": 70,
+      "is_fragile": true,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_023",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 121,
+      "weight": 102,
+      "is_fragile": true,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_046",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 87,
+      "weight": 38,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 5,
+        "z": 6
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "long_018",
+      "dimension": {
+        "w": 1,
+        "l": 8,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 51,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 12,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_051",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 87,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 3,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_067",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 161,
+      "weight": 61,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 8,
+        "z": 4
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_033",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 68,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 7,
+        "z": 5
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_077",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 167,
+      "weight": 52,
+      "is_fragile": true,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 7,
+        "z": 6
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_102",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 40,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_097",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 34,
+      "weight": 14,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_035",
+      "dimension": {
+        "w": 6,
+        "l": 6,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 267,
+      "weight": 156,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_102",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 38,
+      "weight": 21,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 13,
+        "z": 5
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "long_012",
+      "dimension": {
+        "w": 2,
+        "l": 14,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 95,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_001",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 99,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 14,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_004",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 20,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 6,
+        "z": 2
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_090",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 13,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_005",
+      "dimension": {
+        "w": 4,
+        "l": 5,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 111,
+      "weight": 51,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_032",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 93,
+      "weight": 20,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 3,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_094",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 41,
+      "weight": 20,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_018",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 76,
+      "weight": 55,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_023",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 19,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 13,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_002",
+      "dimension": {
+        "w": 1,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 77,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 6,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_049",
+      "dimension": {
+        "w": 5,
+        "l": 5,
+        "h": 5
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 334,
+      "weight": 130,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_043",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 99,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 11,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "medium_056",
+      "dimension": {
+        "w": 6,
+        "l": 5,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 244,
+      "weight": 177,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_026",
+      "dimension": {
+        "w": 2,
+        "l": 12,
+        "h": 1
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 78,
+      "weight": 14,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 4,
+        "z": 4
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_045",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 124,
+      "weight": 38,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_072",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 65,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 6,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_047",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 214,
+      "weight": 126,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_088",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 49,
+      "weight": 19,
+      "is_fragile": true,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_069",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 62,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_099",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 37,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 19,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_015",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 5
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 159,
+      "weight": 50,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_090",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 107,
+      "weight": 50,
+      "is_fragile": true,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 8,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_048",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 108,
+      "weight": 31,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 10,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_061",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 62,
+      "weight": 43,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_007",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 72,
+      "weight": 32,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 6,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_024",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 75,
+      "weight": 24,
+      "is_fragile": true,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_016",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 210,
+      "weight": 81,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 6,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_026",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 142,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 1,
+        "z": 6
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_055",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 72,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 5,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_015",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 188,
+      "weight": 76,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_009",
+      "dimension": {
+        "w": 3,
+        "l": 5,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 119,
+      "weight": 58,
+      "is_fragile": true,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_030",
+      "dimension": {
+        "w": 6,
+        "l": 5,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 290,
+      "weight": 116,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_056",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 31,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 8,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_025",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 67,
+      "weight": 17,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 11,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_006",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 138,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_093",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 159,
+      "weight": 27,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 6,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "long_025",
+      "dimension": {
+        "w": 2,
+        "l": 11,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 195,
+      "weight": 37,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_024",
+      "dimension": {
+        "w": 6,
+        "l": 5,
+        "h": 6
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 500,
+      "weight": 216,
+      "is_fragile": true,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_028",
+      "dimension": {
+        "w": 2,
+        "l": 1,
+        "h": 1
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 37,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 1,
+        "z": 4
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "long_030",
+      "dimension": {
+        "w": 1,
+        "l": 9,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 30,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 7,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_030",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 45,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_016",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 36,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 8,
+        "z": 3
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_052",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 93,
+      "weight": 32,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 14,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_081",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 286,
+      "weight": 93,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 9,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "tiny_017",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 85,
+      "weight": 18,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 5,
+        "z": 8
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "small_075",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 149,
+      "weight": 81,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 13,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_013",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 114,
+      "weight": 32,
+      "is_fragile": true,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "medium_021",
+      "dimension": {
+        "w": 4,
+        "l": 5,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 120,
+      "weight": 51,
+      "is_fragile": true,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_097",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 100,
+      "weight": 44,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "long_014",
+      "dimension": {
+        "w": 1,
+        "l": 8,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 25,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 7,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_101",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 204,
+      "weight": 52,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "tiny_061",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 1
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 52,
+      "weight": 19,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 14,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "medium_016",
+      "dimension": {
+        "w": 5,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 125,
+      "weight": 48,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 3,
+        "z": 0
+      },
+      "truck_id": 1
+    },
+    {
+      "id": "tiny_092",
+      "dimension": {
+        "w": 1,
+        "l": 1,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 30,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 5,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_056",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 127,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    }
+  ]
+}

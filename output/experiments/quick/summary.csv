@@ -1,0 +1,28 @@
+experiment,run,seed,input,algorithm,initial_value,final_value,duration_s,iterations,feasible,packages_inside,packages_total,total_value,total_weight,capacity,overweight,fragile_pairs,eta_pairs,floating,pop_size,generations,restarts,max_restarts,iterations_per_restart,climb_stop_reasons,restart_base,evaluations,stop_reason,sideways_moves,max_sideways,stuck_count,stuck_frequency,no_neighbor,accepted_worse,last_value,t_start,t_final,cooling
+ga_gen5_pop10,1,3170,01_uma,Genetic Algorithm,200.0,200.0,0.0117,5,True,6,6,200,70,500,0,0,0,0,10,5,,,,,,,,,,,,,,,,,
+ga_gen5_pop10,2,3171,01_uma,Genetic Algorithm,200.0,200.0,0.0133,5,True,6,6,200,70,500,0,0,0,0,10,5,,,,,,,,,,,,,,,,,
+ga_gen5_pop10,3,3172,01_uma,Genetic Algorithm,200.0,200.0,0.0121,5,True,6,6,200,70,500,0,0,0,0,10,5,,,,,,,,,,,,,,,,,
+ga_gen5_pop5,1,3170,01_uma,Genetic Algorithm,200.0,200.0,0.0066,5,True,6,6,200,70,500,0,0,0,0,5,5,,,,,,,,,,,,,,,,,
+ga_gen5_pop5,2,3171,01_uma,Genetic Algorithm,200.0,200.0,0.0075,5,True,6,6,200,70,500,0,0,0,0,5,5,,,,,,,,,,,,,,,,,
+ga_gen5_pop5,3,3172,01_uma,Genetic Algorithm,200.0,200.0,0.0061,5,True,6,6,200,70,500,0,0,0,0,5,5,,,,,,,,,,,,,,,,,
+ga_pop10_gen10,1,3170,01_uma,Genetic Algorithm,200.0,200.0,0.0231,10,True,6,6,200,70,500,0,0,0,0,10,10,,,,,,,,,,,,,,,,,
+ga_pop10_gen10,2,3171,01_uma,Genetic Algorithm,200.0,200.0,0.0241,10,True,6,6,200,70,500,0,0,0,0,10,10,,,,,,,,,,,,,,,,,
+ga_pop10_gen10,3,3172,01_uma,Genetic Algorithm,200.0,200.0,0.0242,10,True,6,6,200,70,500,0,0,0,0,10,10,,,,,,,,,,,,,,,,,
+ga_pop10_gen5,1,3170,01_uma,Genetic Algorithm,200.0,200.0,0.0132,5,True,6,6,200,70,500,0,0,0,0,10,5,,,,,,,,,,,,,,,,,
+ga_pop10_gen5,2,3171,01_uma,Genetic Algorithm,200.0,200.0,0.0124,5,True,6,6,200,70,500,0,0,0,0,10,5,,,,,,,,,,,,,,,,,
+ga_pop10_gen5,3,3172,01_uma,Genetic Algorithm,200.0,200.0,0.0134,5,True,6,6,200,70,500,0,0,0,0,10,5,,,,,,,,,,,,,,,,,
+hc_restart,1,3170,01_uma,hc-random_restart,150.0,200.0,0.0052,1,True,6,6,200,70,500,0,0,0,0,,,2,2,"[1, 0, 0]","[""local_optimum"", ""local_optimum"", ""local_optimum""]",steepest,25,max_restarts,,,,,,,,,,
+hc_restart,2,3171,01_uma,hc-random_restart,200.0,200.0,0.004,1,True,6,6,200,70,500,0,0,0,0,,,2,2,"[0, 1, 0]","[""local_optimum"", ""local_optimum"", ""local_optimum""]",steepest,26,max_restarts,,,,,,,,,,
+hc_restart,3,3172,01_uma,hc-random_restart,150.0,200.0,0.0115,4,True,6,6,200,70,500,0,0,0,0,,,2,2,"[1, 2, 1]","[""local_optimum"", ""local_optimum"", ""local_optimum""]",steepest,47,max_restarts,,,,,,,,,,
+hc_sideways,1,3170,01_uma, Hill Climbing - sideways,150.0,200.0,0.0082,7,True,6,6,200,70,500,0,0,0,0,,,,,,,,44,local_optimum,6,10,,,,,,,,
+hc_sideways,2,3171,01_uma, Hill Climbing - sideways,200.0,200.0,0.0088,10,True,6,6,200,70,500,0,0,0,0,,,,,,,,54,max_sideways,10,10,,,,,,,,
+hc_sideways,3,3172,01_uma, Hill Climbing - sideways,150.0,200.0,0.0104,11,True,6,6,200,70,500,0,0,0,0,,,,,,,,66,max_sideways,10,10,,,,,,,,
+hc_steepest,1,3170,01_uma, Hill Climbing - steepest,150.0,200.0,0.0022,1,True,6,6,200,70,500,0,0,0,0,,,,,,,,12,local_optimum,,,,,,,,,,
+hc_steepest,2,3171,01_uma, Hill Climbing - steepest,200.0,200.0,0.0008,0,True,6,6,200,70,500,0,0,0,0,,,,,,,,4,local_optimum,,,,,,,,,,
+hc_steepest,3,3172,01_uma, Hill Climbing - steepest,150.0,200.0,0.0016,1,True,6,6,200,70,500,0,0,0,0,,,,,,,,14,local_optimum,,,,,,,,,,
+hc_stochastic,1,3170,01_uma, Hill Climbing - stochastic,150.0,200.0,0.0022,1,True,6,6,200,70,500,0,0,0,0,,,,,,,,13,local_optimum,,,,,,,,,,
+hc_stochastic,2,3171,01_uma, Hill Climbing - stochastic,200.0,200.0,0.0007,0,True,6,6,200,70,500,0,0,0,0,,,,,,,,4,local_optimum,,,,,,,,,,
+hc_stochastic,3,3172,01_uma, Hill Climbing - stochastic,150.0,200.0,0.0017,1,True,6,6,200,70,500,0,0,0,0,,,,,,,,16,local_optimum,,,,,,,,,,
+sa,1,3170,01_uma,Simulated Annealing,150.0,200.0,0.0358,500,True,6,6,200,70,500,0,0,0,0,,,,,,,,,,,,330,0.66,196,0,200.0,2.5,0.02499999999999937,geometric
+sa,2,3171,01_uma,Simulated Annealing,200.0,200.0,0.037,500,True,6,6,200,70,500,0,0,0,0,,,,,,,,,,,,314,0.628,194,0,200.0,2.5,0.02499999999999937,geometric
+sa,3,3172,01_uma,Simulated Annealing,150.0,200.0,0.0374,500,True,6,6,200,70,500,0,0,0,0,,,,,,,,,,,,338,0.676,201,0,200.0,2.5,0.02499999999999937,geometric

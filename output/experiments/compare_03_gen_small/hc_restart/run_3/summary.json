@@ -1,0 +1,106 @@
+{
+  "experiment": "hc_restart",
+  "run": 3,
+  "seed": 3172,
+  "input": "03_gen_small",
+  "algorithm": "hc-random_restart",
+  "initial_value": -1350.38,
+  "final_value": 4744.66,
+  "duration_s": 1.0126,
+  "iterations": 182,
+  "feasible": true,
+  "packages_inside": 51,
+  "packages_total": 80,
+  "total_value": 4825,
+  "total_weight": 1050,
+  "capacity": 1500,
+  "overweight": 0,
+  "fragile_pairs": 0,
+  "eta_pairs": 13,
+  "floating": 0,
+  "restarts": 5,
+  "max_restarts": 5,
+  "iterations_per_restart": [
+    25,
+    18,
+    35,
+    33,
+    28,
+    43
+  ],
+  "climb_stop_reasons": [
+    "local_optimum",
+    "local_optimum",
+    "local_optimum",
+    "local_optimum",
+    "local_optimum",
+    "local_optimum"
+  ],
+  "restart_base": "steepest",
+  "evaluations": 5003,
+  "stop_reason": "max_restarts",
+  "params": {
+    "seed": 3172,
+    "objective": {
+      "variant": 3,
+      "c_floating": 1.0,
+      "c_fragile": 1.0,
+      "c_weight": 1.0,
+      "c_eta": 0.01,
+      "c_support": 1.0,
+      "min_support": 0.5,
+      "c_compact": 1.0,
+      "adaptive": false
+    },
+    "init": {
+      "mode": "drop",
+      "tries": 5,
+      "p_in": 1.0,
+      "weight_ratio": 1.0
+    },
+    "neighbor": {
+      "w_relocate": 0.35,
+      "w_outside": 0.1,
+      "w_rotate": 0.2,
+      "w_switch": 0.15,
+      "w_swap": 0.2,
+      "target_random": 1.0,
+      "target_near": 1.0,
+      "target_ep": 1.0,
+      "near_radius": 2,
+      "rotate_policy": "reanchor",
+      "swap_orient_tries": 6,
+      "similar_partner": true,
+      "partner_samples": 8,
+      "settle": true
+    },
+    "ga": {
+      "pop_size": 50,
+      "generations": 100,
+      "crossover_rate": 0.8,
+      "mutation_rate": null,
+      "shift_mutation": 0,
+      "elitism": 1,
+      "selection": "roulette",
+      "tournament_k": 3,
+      "eta_seed_frac": 0.0,
+      "max_candidates": 64
+    },
+    "hc": {
+      "variant": "random_restart",
+      "neighbors_per_step": 50,
+      "max_iterations": 10000,
+      "max_sideways": 100,
+      "max_restarts": 5,
+      "restart_base": "steepest"
+    },
+    "sa": {
+      "t_start": 0.05,
+      "t_end": 0.0005,
+      "t_scale": "v_max",
+      "cooling": "geometric",
+      "alpha": null,
+      "iterations": 100000
+    }
+  }
+}

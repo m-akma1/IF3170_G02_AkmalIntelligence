@@ -1,0 +1,4861 @@
+{
+  "truck": {
+    "dimension": {
+      "w": 15,
+      "l": 15,
+      "h": 15
+    },
+    "max_capacity": 2000,
+    "objective_value": 21185.64
+  },
+  "packages": [
+    {
+      "id": "small_046",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 141,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_066",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 46,
+      "weight": 57,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 9,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_024",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 223,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 12,
+        "z": 12
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_012",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 20,
+      "weight": 31,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_018",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 61,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_036",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 298,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_060",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 63,
+      "weight": 77,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 12,
+        "y": 7,
+        "z": 11
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_012",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 48,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_030",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 76,
+      "weight": 180,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 9,
+        "z": 9
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_040",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 68,
+      "weight": 235,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_041",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 69,
+      "weight": 72,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_012",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 655,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 13,
+        "y": 1,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_055",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 21,
+      "weight": 98,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_080",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 122,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_048",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 41,
+      "weight": 70,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_042",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 51,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 11,
+        "z": 9
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_001",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 691,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 9,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_007",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 50,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 12,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_069",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 11,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 7,
+        "z": 9
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_027",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 25,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_003",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 175,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 11,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_025",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 197,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_062",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 118,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 10,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_004",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 39,
+      "weight": 109,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "trap_heavy",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 10,
+      "weight": 2000,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_022",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 25,
+      "weight": 43,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 0,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_026",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 635,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 13,
+        "y": 4,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_045",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 57,
+      "weight": 15,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_035",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 114,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "trap_oversize",
+      "dimension": {
+        "w": 5,
+        "l": 16,
+        "h": 5
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 9999,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_043",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 50,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_027",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 784,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 12,
+        "y": 8,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_038",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 34,
+      "weight": 2,
+      "is_fragile": true,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_062",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 50,
+      "weight": 84,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_001",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 35,
+      "weight": 148,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_019",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 38,
+      "weight": 197,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_005",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 583,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_044",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 111,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 1,
+        "z": 12
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_014",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 31,
+      "weight": 26,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_037",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 757,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 9,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_057",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 76,
+      "weight": 43,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 4,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_016",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 22,
+      "weight": 47,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_009",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 530,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 5,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_038",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 562,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 5,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_039",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 46,
+      "weight": 41,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 11,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_047",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 138,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_075",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 87,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 3,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_004",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 75,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 8,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_036",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 31,
+      "weight": 243,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 5,
+        "z": 11
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_011",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 25,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 0,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_074",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 75,
+      "weight": 254,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_009",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 46,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_052",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 57,
+      "weight": 66,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 13,
+        "y": 7,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_080",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 58,
+      "weight": 34,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_070",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 26,
+      "weight": 87,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_049",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 26,
+      "weight": 85,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_010",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 17,
+      "weight": 47,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 10,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_031",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 71,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_071",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 45,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_029",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 597,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 12,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_032",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 546,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 12,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_006",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 175,
+      "weight": 12,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_026",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 118,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_049",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 235,
+      "weight": 12,
+      "is_fragile": true,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 1,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_031",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 574,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 3,
+        "z": 11
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_022",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 452,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_076",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 23,
+      "weight": 201,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_053",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 108,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 6,
+        "z": 12
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_073",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 59,
+      "weight": 54,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_028",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 159,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_041",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 100,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 4,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_048",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 72,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_059",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 25,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_021",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 70,
+      "weight": 22,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_044",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 42,
+      "weight": 67,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_007",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 464,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_052",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 279,
+      "weight": 10,
+      "is_fragile": true,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_030",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 233,
+      "weight": 16,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_037",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 43,
+      "weight": 75,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_020",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 45,
+      "weight": 84,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 7,
+        "z": 11
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_065",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 40,
+      "weight": 226,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_013",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 340,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 7,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_033",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 150,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 2,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_067",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 47,
+      "weight": 94,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_016",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 118,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_045",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 71,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_006",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 76,
+      "weight": 37,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_003",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 18,
+      "weight": 41,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_040",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 116,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_079",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 13,
+      "weight": 39,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_064",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 100,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_039",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 121,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 4,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_064",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 44,
+      "weight": 124,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_043",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 55,
+      "weight": 99,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 0,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_026",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 52,
+      "weight": 74,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_003",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 636,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 4,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_033",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 682,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 4,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_079",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 147,
+      "weight": 11,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 12,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_023",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 58,
+      "weight": 133,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_071",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 23,
+      "weight": 130,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_011",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 44,
+      "weight": 93,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_008",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 133,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_002",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 722,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 6,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_063",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 90,
+      "weight": 4,
+      "is_fragile": true,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_038",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 58,
+      "weight": 87,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_001",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 101,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_061",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 91,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 5,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_002",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 67,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 3,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_040",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 514,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_068",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 20,
+      "weight": 33,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_015",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 25,
+      "weight": 190,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_056",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 188,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_077",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 58,
+      "weight": 59,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 8,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_034",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 213,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_004",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 417,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 0,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_018",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 460,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 11,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_016",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 423,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 1,
+        "z": 11
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_076",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 140,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 3,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_015",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 321,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 1,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_074",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 203,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 6,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_039",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 393,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 13,
+        "y": 7,
+        "z": 13
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_010",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 152,
+      "weight": 13,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_069",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 32,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 9,
+        "z": 11
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_058",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 89,
+      "weight": 5,
+      "is_fragile": true,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_020",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 51,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 13,
+        "y": 11,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_075",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 41,
+      "weight": 266,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_021",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 61,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 6,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_050",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 35,
+      "weight": 63,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 12,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_024",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 67,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 12,
+        "y": 13,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_017",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 117,
+      "weight": 10,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_042",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 70,
+      "weight": 102,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_060",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 82,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_047",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 45,
+      "weight": 73,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_057",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 210,
+      "weight": 14,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_017",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 47,
+      "weight": 197,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_014",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 520,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 3,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_073",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 93,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_053",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 71,
+      "weight": 195,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_058",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 22,
+      "weight": 142,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_070",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 47,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_061",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 73,
+      "weight": 151,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 5,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_056",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 58,
+      "weight": 47,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_028",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 218,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_008",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 454,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 9,
+        "z": 12
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_051",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 46,
+      "weight": 49,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 6,
+        "y": 6,
+        "z": 12
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_007",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 34,
+      "weight": 46,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_066",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 67,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 6,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_055",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 77,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_008",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 12,
+      "weight": 63,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_034",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 65,
+      "weight": 54,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 11,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_002",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 34,
+      "weight": 130,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_037",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 48,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 13,
+        "y": 12,
+        "z": 4
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_072",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 106,
+      "weight": 6,
+      "is_fragile": false,
+      "eta": 7,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 12,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_031",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 28,
+      "weight": 44,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_067",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 34,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 9,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_029",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 122,
+      "weight": 4,
+      "is_fragile": true,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 7,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_054",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 60,
+      "weight": 46,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 0,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_021",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 433,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_035",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 41,
+      "weight": 26,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_068",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 144,
+      "weight": 8,
+      "is_fragile": true,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 10,
+        "z": 12
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_078",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 25,
+      "weight": 111,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_029",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 39,
+      "weight": 14,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_006",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 359,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 0,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_020",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 335,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 2,
+        "z": 12
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_023",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 242,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 7,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_005",
+      "dimension": {
+        "w": 3,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 72,
+      "weight": 102,
+      "is_fragile": false,
+      "eta": 5,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_024",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 43,
+      "weight": 129,
+      "is_fragile": false,
+      "eta": 9,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_023",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 389,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 8,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_077",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 227,
+      "weight": 12,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_014",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 55,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_019",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 279,
+      "weight": 15,
+      "is_fragile": true,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 11,
+        "z": 11
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_036",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 80,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_035",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 594,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 1,
+        "z": 5
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_009",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 131,
+      "weight": 8,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 5,
+        "y": 0,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_072",
+      "dimension": {
+        "w": 4,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 44,
+      "weight": 96,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_010",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 391,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 12,
+        "y": 7,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_005",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 38,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 4,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "light_gold_030",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 573,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 9,
+        "z": 12
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_022",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 99,
+      "weight": 7,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 3,
+        "y": 11,
+        "z": 6
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_017",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 528,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 7,
+        "y": 9,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_011",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 438,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 8,
+        "z": 8
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_019",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 692,
+      "weight": 1,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_051",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 45,
+      "weight": 3,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_034",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 101,
+      "weight": 11,
+      "is_fragile": true,
+      "eta": 2,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_033",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 27,
+      "weight": 87,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_054",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 114,
+      "weight": 5,
+      "is_fragile": true,
+      "eta": 7,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_050",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "z",
+        "h": "y"
+      },
+      "value": 78,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 2,
+      "is_inside": true,
+      "pos": {
+        "x": 9,
+        "y": 1,
+        "z": 10
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_025",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 56,
+      "weight": 90,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_028",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 39,
+      "weight": 82,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_018",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 50,
+      "weight": 60,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 11,
+        "y": 6,
+        "z": 3
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_078",
+      "dimension": {
+        "w": 2,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 127,
+      "weight": 7,
+      "is_fragile": true,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_065",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 75,
+      "weight": 4,
+      "is_fragile": true,
+      "eta": 1,
+      "is_inside": true,
+      "pos": {
+        "x": 10,
+        "y": 1,
+        "z": 0
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_013",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 43,
+      "weight": 157,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_046",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 31,
+      "weight": 106,
+      "is_fragile": false,
+      "eta": 10,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_063",
+      "dimension": {
+        "w": 4,
+        "l": 2,
+        "h": 4
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 79,
+      "weight": 99,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_015",
+      "dimension": {
+        "w": 2,
+        "l": 3,
+        "h": 4
+      },
+      "orientation": {
+        "w": "z",
+        "l": "y",
+        "h": "x"
+      },
+      "value": 132,
+      "weight": 4,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 2,
+        "y": 11,
+        "z": 13
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_013",
+      "dimension": {
+        "w": 2,
+        "l": 2,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 32,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "small_032",
+      "dimension": {
+        "w": 3,
+        "l": 2,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "x",
+        "h": "z"
+      },
+      "value": 40,
+      "weight": 5,
+      "is_fragile": false,
+      "eta": 8,
+      "is_inside": true,
+      "pos": {
+        "x": 0,
+        "y": 8,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "small_059",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 2
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 76,
+      "weight": 9,
+      "is_fragile": false,
+      "eta": 6,
+      "is_inside": true,
+      "pos": {
+        "x": 8,
+        "y": 8,
+        "z": 2
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "dense_iron_032",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "x",
+        "l": "y",
+        "h": "z"
+      },
+      "value": 55,
+      "weight": 35,
+      "is_fragile": false,
+      "eta": 3,
+      "is_inside": true,
+      "pos": {
+        "x": 4,
+        "y": 0,
+        "z": 13
+      },
+      "truck_id": 0
+    },
+    {
+      "id": "light_gold_025",
+      "dimension": {
+        "w": 3,
+        "l": 3,
+        "h": 2
+      },
+      "orientation": {
+        "w": "z",
+        "l": "x",
+        "h": "y"
+      },
+      "value": 353,
+      "weight": 2,
+      "is_fragile": false,
+      "eta": 1,
+      "is_inside": false,
+      "pos": {
+        "x": -1,
+        "y": -1,
+        "z": -1
+      },
+      "truck_id": -1
+    },
+    {
+      "id": "dense_iron_027",
+      "dimension": {
+        "w": 4,
+        "l": 4,
+        "h": 3
+      },
+      "orientation": {
+        "w": "y",
+        "l": "z",
+        "h": "x"
+      },
+      "value": 48,
+      "weight": 112,
+      "is_fragile": false,
+      "eta": 0,
+      "is_inside": true,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 8
+      },
+      "truck_id": 0
+    }
+  ]
+}

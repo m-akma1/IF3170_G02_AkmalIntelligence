@@ -1,0 +1,93 @@
+{
+  "experiment": "sa",
+  "run": 3,
+  "seed": 3172,
+  "input": "06_gen_heavy",
+  "algorithm": "Simulated Annealing",
+  "initial_value": 9372.36,
+  "final_value": 28313.16,
+  "duration_s": 10.1528,
+  "iterations": 100000,
+  "feasible": true,
+  "packages_inside": 138,
+  "packages_total": 202,
+  "total_value": 28321,
+  "total_weight": 1972,
+  "capacity": 2000,
+  "overweight": 0,
+  "fragile_pairs": 0,
+  "eta_pairs": 1,
+  "floating": 0,
+  "stuck_count": 90320,
+  "stuck_frequency": 0.9032,
+  "no_neighbor": 64397,
+  "accepted_worse": 1721,
+  "last_value": 28313.16,
+  "t_start": 39.2,
+  "t_final": 0.3919999999997965,
+  "cooling": "geometric",
+  "params": {
+    "seed": 3172,
+    "objective": {
+      "variant": 3,
+      "c_floating": 1.0,
+      "c_fragile": 1.0,
+      "c_weight": 1.0,
+      "c_eta": 0.01,
+      "c_support": 1.0,
+      "min_support": 0.5,
+      "c_compact": 1.0,
+      "adaptive": false
+    },
+    "init": {
+      "mode": "drop",
+      "tries": 5,
+      "p_in": 1.0,
+      "weight_ratio": 1.0
+    },
+    "neighbor": {
+      "w_relocate": 0.35,
+      "w_outside": 0.1,
+      "w_rotate": 0.2,
+      "w_switch": 0.15,
+      "w_swap": 0.2,
+      "target_random": 1.0,
+      "target_near": 1.0,
+      "target_ep": 1.0,
+      "near_radius": 2,
+      "rotate_policy": "reanchor",
+      "swap_orient_tries": 6,
+      "similar_partner": true,
+      "partner_samples": 8,
+      "settle": true
+    },
+    "ga": {
+      "pop_size": 50,
+      "generations": 100,
+      "crossover_rate": 0.8,
+      "mutation_rate": null,
+      "shift_mutation": 0,
+      "elitism": 1,
+      "selection": "roulette",
+      "tournament_k": 3,
+      "eta_seed_frac": 0.0,
+      "max_candidates": 64
+    },
+    "hc": {
+      "variant": "steepest",
+      "neighbors_per_step": 50,
+      "max_iterations": 10000,
+      "max_sideways": 100,
+      "max_restarts": 10,
+      "restart_base": "steepest"
+    },
+    "sa": {
+      "t_start": 0.05,
+      "t_end": 0.0005,
+      "t_scale": "v_max",
+      "cooling": "geometric",
+      "alpha": null,
+      "iterations": 100000
+    }
+  }
+}

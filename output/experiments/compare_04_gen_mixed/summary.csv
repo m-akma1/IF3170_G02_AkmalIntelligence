@@ -1,0 +1,19 @@
+experiment,run,seed,input,algorithm,initial_value,final_value,duration_s,iterations,feasible,packages_inside,packages_total,total_value,total_weight,capacity,overweight,fragile_pairs,eta_pairs,floating,pop_size,generations,restarts,max_restarts,iterations_per_restart,climb_stop_reasons,restart_base,evaluations,stop_reason,sideways_moves,max_sideways,stuck_count,stuck_frequency,no_neighbor,accepted_worse,last_value,t_start,t_final,cooling
+ga,1,3170,04_gen_mixed,Genetic Algorithm,16050.8,18153.42,20.9441,50,True,145,186,21732,5525,6000,0,0,162,0,30,50,,,,,,,,,,,,,,,,,
+ga,2,3171,04_gen_mixed,Genetic Algorithm,15926.7,18323.05,18.5189,50,True,129,186,21747,6000,6000,0,0,155,0,30,50,,,,,,,,,,,,,,,,,
+ga,3,3172,04_gen_mixed,Genetic Algorithm,17017.88,17975.53,21.5129,50,True,136,186,22018,5259,6000,0,0,183,0,30,50,,,,,,,,,,,,,,,,,
+hc_restart,1,3170,04_gen_mixed,hc-random_restart,-19550.53,18598.95,3.8443,420,True,122,186,19593,4439,6000,0,0,45,0,,,5,5,"[58, 59, 84, 50, 87, 82]","[""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum""]",steepest,15237,max_restarts,,,,,,,,,,
+hc_restart,2,3171,04_gen_mixed,hc-random_restart,-24114.46,18747.95,4.233,475,True,129,186,19742,4457,6000,0,0,45,0,,,5,5,"[97, 64, 63, 66, 93, 92]","[""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum""]",steepest,16926,max_restarts,,,,,,,,,,
+hc_restart,3,3172,04_gen_mixed,hc-random_restart,-35439.5,18707.68,3.2268,356,True,120,186,19768,4785,6000,0,0,48,0,,,5,5,"[37, 43, 64, 62, 63, 87]","[""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum"", ""local_optimum""]",steepest,12765,max_restarts,,,,,,,,,,
+hc_sideways,1,3170,04_gen_mixed, Hill Climbing - sideways,-19550.53,22560.82,6.2211,747,True,148,186,22605,6000,6000,0,0,2,0,,,,,,,,22228,max_sideways,548,100,,,,,,,,
+hc_sideways,2,3171,04_gen_mixed, Hill Climbing - sideways,-24114.46,20166.74,4.5773,560,True,144,186,20476,5968,6000,0,0,14,0,,,,,,,,17308,max_sideways,386,100,,,,,,,,
+hc_sideways,3,3172,04_gen_mixed, Hill Climbing - sideways,-35439.5,21003.65,3.5596,441,True,144,186,21335,5904,6000,0,0,15,0,,,,,,,,13507,local_optimum,258,100,,,,,,,,
+hc_steepest,1,3170,04_gen_mixed, Hill Climbing - steepest,-19550.53,18164.52,0.5189,58,True,114,186,19755,4081,6000,0,0,72,0,,,,,,,,2181,local_optimum,,,,,,,,,,
+hc_steepest,2,3171,04_gen_mixed, Hill Climbing - steepest,-24114.46,17292.85,0.9244,97,True,130,186,18066,4616,6000,0,0,35,0,,,,,,,,3480,local_optimum,,,,,,,,,,
+hc_steepest,3,3172,04_gen_mixed, Hill Climbing - steepest,-35439.5,14246.9,0.2751,37,False,120,186,18444,5952,6000,0,1,90,0,,,,,,,,1244,local_optimum,,,,,,,,,,
+hc_stochastic,1,3170,04_gen_mixed, Hill Climbing - stochastic,-19550.53,17157.13,0.9957,129,True,115,186,18107,5900,6000,0,0,43,0,,,,,,,,4530,local_optimum,,,,,,,,,,
+hc_stochastic,2,3171,04_gen_mixed, Hill Climbing - stochastic,-24114.46,11373.25,0.4897,59,False,105,186,15239,4538,6000,0,1,75,0,,,,,,,,2174,local_optimum,,,,,,,,,,
+hc_stochastic,3,3172,04_gen_mixed, Hill Climbing - stochastic,-35439.5,-2319.02,0.4807,57,False,118,186,17076,5934,6000,0,8,78,0,,,,,,,,1918,local_optimum,,,,,,,,,,
+sa,1,3170,04_gen_mixed,Simulated Annealing,-19550.53,23138.82,16.2261,100000,True,151,186,23183,5876,6000,0,0,2,0,,,,,,,,,,,,78094,0.78094,37845,4391,23138.82,110.45,1.1044999999993774,geometric
+sa,2,3171,04_gen_mixed,Simulated Annealing,-24114.46,23641.0,16.3163,100000,True,151,186,23641,5999,6000,0,0,0,0,,,,,,,,,,,,77813,0.77813,35716,4482,23641.0,110.45,1.1044999999993774,geometric
+sa,3,3172,04_gen_mixed,Simulated Annealing,-35439.5,23212.91,15.3513,100000,True,151,186,23235,5975,6000,0,0,1,0,,,,,,,,,,,,79090,0.7909,38192,4344,23212.91,110.45,1.1044999999993774,geometric
